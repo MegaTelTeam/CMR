@@ -46,7 +46,7 @@ export default function NavBar() {
         }
       </NavbarContent>
     
-      <NavbarMenu className="mt-4">
+      <NavbarMenu className="mt-10">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item.text}-${index}`}  isActive={pathName===item.link}>
             <Link
