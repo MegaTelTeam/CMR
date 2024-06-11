@@ -2,10 +2,21 @@
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
 import { usePathname } from "next/navigation";
-import NextLink from 'next/link'
+// import { useSession } from "next-auth/react";
+// import { useSupabase } from "@/providers/supabaseProvider";
+
 
 export default function NavBar() {
+  // const {data:session}=useSession()
   // console.log(session)
+
+  // const client = useSupabase()
+  // client?.from("users").select("*").then((res)=>{
+  //   console.log(res)
+  // }).catch((err)=>{
+    
+  // })
+
 
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -41,7 +52,7 @@ export default function NavBar() {
         {
           menuItems.map((item, index) => (
             <NavbarItem key={`${item.text}-${index}`} isActive={pathName===item.link}>
-              <Link as={NextLink} color="foreground" href={item.link} underline={pathName===item.link ? "always" : "hover"}>
+              <Link color="foreground" href={item.link} underline={pathName===item.link ? "always" : "hover"}>
                 {item.text}
               </Link>
             </NavbarItem>
@@ -54,7 +65,6 @@ export default function NavBar() {
           <NavbarMenuItem key={`${item.text}-${index}`}  isActive={pathName===item.link}>
             <Link
               className="w-full"
-              as={NextLink}
               color="foreground"
               href={item.link}
               size="lg"
