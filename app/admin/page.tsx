@@ -1,11 +1,12 @@
 "use client"
 import { Input , Button, Checkbox, Link} from "@nextui-org/react"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from 'next/image'
 import { FaEye, FaEyeSlash} from "react-icons/fa";
 import { signIn} from "next-auth/react"
 import { useRouter } from "next/navigation";
 import NextLink from 'next/link'
+import { useSession } from "next-auth/react";
 
 export default function LoginForm() {
     const [isVisible, setIsVisible] = useState(false);
@@ -24,6 +25,13 @@ export default function LoginForm() {
     }
     
     const router=useRouter()
+    const {data:session} = useSession()
+
+    useEffect(()=>{
+        if(session){
+            router.replace("/admin/dashboard")
+        }
+    },[session, router])
 
     const toggleVisibility = () => setIsVisible(!isVisible);
 
@@ -36,7 +44,7 @@ export default function LoginForm() {
                 throw Error("invalid credentials")
             }
             if(res?.ok && !res.error){
-                router.push("/")
+                router.push("/admin/dashboard")
             }
         }).catch((error)=>{
             console.log(error)

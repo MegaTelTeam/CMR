@@ -15,6 +15,26 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        CRM_primary: {
+          100: '#e8b595',
+          200: '#c99879',
+          300: '#c49374',
+        },
+        CRM_accent: {
+          100: '#ab3044',
+          200: '#ffc5ce',
+        },
+        CRM_text: {
+          100: '#353036',
+          200: '#5f5960',
+        },
+        CRM_bg: {
+          100: '#ffffff',
+          200: '#f5f5f5',
+          300: '#cccccc',
+        },
+      }
     },
   },
   darkMode: "class",
