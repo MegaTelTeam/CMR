@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NextUIProv from "../providers/nextProvider";
 import {AOSProvider} from "../providers/AOSProvider";
+import AppSession from "@/providers/AppSession";
+import SupaBaseProvider from "@/providers/supabaseProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,11 +21,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NextUIProv>
-          <AOSProvider>
-            {children}
-          </AOSProvider>          
-        </NextUIProv>
+        <AppSession>
+          <SupaBaseProvider>
+          <NextUIProv>
+            <AOSProvider>
+              {children}
+            </AOSProvider>          
+          </NextUIProv>
+          </SupaBaseProvider>
+        </AppSession>
       </body>
     </html>
   );

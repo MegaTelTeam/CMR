@@ -2,9 +2,12 @@
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
 import { usePathname } from "next/navigation";
-
+import NextLink from 'next/link'
 
 export default function NavBar() {
+  // console.log(session)
+
+
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const pathName = usePathname()
 
@@ -38,7 +41,7 @@ export default function NavBar() {
         {
           menuItems.map((item, index) => (
             <NavbarItem key={`${item.text}-${index}`} isActive={pathName===item.link}>
-              <Link color="foreground" href={item.link} underline={pathName===item.link ? "always" : "hover"}>
+              <Link as={NextLink} color="foreground" href={item.link} underline={pathName===item.link ? "always" : "hover"}>
                 {item.text}
               </Link>
             </NavbarItem>
@@ -51,6 +54,7 @@ export default function NavBar() {
           <NavbarMenuItem key={`${item.text}-${index}`}  isActive={pathName===item.link}>
             <Link
               className="w-full"
+              as={NextLink}
               color="foreground"
               href={item.link}
               size="lg"
