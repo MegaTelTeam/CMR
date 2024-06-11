@@ -28,10 +28,10 @@ export default function Sidebar() {
                     Requests
                 </Link>
                 <Link
-                    className="text-CRM_text-200 font-bold text-xl"
-                    href="#"
+                    className={cn("text-CRM_text-200 font-bold text-xl", pathName === "/admin/dashboard/users" ? "text-CRM_text-100" : "")}
+                    href="/admin/dashboard/users"
+                    underline={pathName === "/admin/dashboard/users" ? "always" : "hover"}
                     as={NextLink}
-                    underline="hover"
                 >
                     Users
                 </Link>
