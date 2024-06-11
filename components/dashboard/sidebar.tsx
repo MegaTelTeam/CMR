@@ -51,6 +51,14 @@ export default function Sidebar() {
                 >
                     Analytics
                 </Link>
+                <Link
+                    className={cn("text-CRM_text-200 font-bold text-xl", pathName === "/admin/dashboard/createNews" ? "text-CRM_text-100" : "")}
+                    href="/admin/dashboard/createNews"
+                    underline={pathName === "/admin/dashboard/createNews" ? "always" : "hover"}
+                    as={NextLink}
+                >
+                    Create News
+                </Link>
             </div>
             <div className="flex-grow"/>
             <div className="h-[100px] flex flex-col gap-4">
