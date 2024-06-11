@@ -37,8 +37,8 @@ export default function SurvayComponent() {
   }
 
   return (
-    <div className="size-full flex flex-col">
-        <div className="w-full flex gap-4 flex-wrap">
+    <div className="relativ size-full">
+        <div className="w-full flex gap-4 flex-col items-center">
             <QuestionMaker nbr={questions.length} addQuestion={addQuestion} isOpen={isOpen} onOpenChange={onOpenChange}/>
             {
                 questions.map((question, index) => (
@@ -53,7 +53,6 @@ export default function SurvayComponent() {
                     Add Question
             </Button>
         </div>
-        <div className="flex-grow"/>
         <div className="flex justify-end w-full">
             <Button 
                 className="w-[300px]" 

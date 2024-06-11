@@ -19,7 +19,7 @@ export default function QuestionCard({
             <ul>
                 {
                     question.responds.map((respond) => (
-                        <li key={respond}>{respond}</li>
+                        <li key={respond.text}>{respond.text}</li>
                     ))
                 }
             </ul>
