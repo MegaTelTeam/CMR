@@ -1,15 +1,13 @@
 "use client"
-import { News, addNews, getAllNews } from "@/app/api/addNews.action"
-import useFetchNews from "@/hooks/useFetchNews"
+import {  addNews } from "@/app/api/addNews.action"
 import { Button, Input, Textarea } from "@nextui-org/react"
-import { SetStateAction, useState } from "react"
+import { useState } from "react"
 
 export default function CreateNews() {
     
     const [title,setTitle]=useState("")
     const [content,setContent]=useState("")
     const [attachement,setAttachement]=useState <string[]>([])
-    const {setNews}=useFetchNews()
 
     const AddNews=()=>{
         if(title==="" || content===""){
