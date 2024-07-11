@@ -2,6 +2,7 @@
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 // import { useSession } from "next-auth/react";
 // import { useSupabase } from "@/providers/supabaseProvider";
 
@@ -32,7 +33,7 @@ export default function NavBar() {
   ];
 
   return (
-    <Navbar maxWidth="2xl" position="static" isBlurred={false} className="absolute h-[120px] md:h-[200px]"  onMenuOpenChange={setIsMenuOpen}>
+    <Navbar maxWidth="full" position="static" isBlurred={false} className="absolute h-[120px] md:h-[200px]"  onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -58,6 +59,10 @@ export default function NavBar() {
             </NavbarItem>
           ))
         }
+      </NavbarContent>
+      <NavbarContent className="hidden md:flex gap-4" justify="center">
+      </NavbarContent>
+      <NavbarContent className="hidden md:flex gap-4" justify="end">
       </NavbarContent>
     
       <NavbarMenu className="mt-10">

@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import {nextui} from "@nextui-org/react";
+import { PluginAPI } from "tailwindcss/types/config";
 
 const config: Config = {
   content: [
@@ -16,28 +17,21 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        CRM_primary: {
-          100: '#e8b595',
-          200: '#c99879',
-          300: '#c49374',
+        "cmr-red" : {
+          500 : '#941530'
         },
-        CRM_accent: {
-          100: '#ab3044',
-          200: '#ffc5ce',
-        },
-        CRM_text: {
-          100: '#353036',
-          200: '#5f5960',
-        },
-        CRM_bg: {
-          100: '#ffffff',
-          200: '#f5f5f5',
-          300: '#cccccc',
-        },
+        "cmr-gray":{
+          500 : "#808080",
+          700: "#bfbfbf",
+          900: "#ebebeb"
+        }
       }
+
     },
   },
   darkMode: "class",
-  plugins: [nextui()]
+  plugins: [
+    nextui(),
+  ]
 };
 export default config;
