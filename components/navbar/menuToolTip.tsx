@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 
-export default function MenuToolTip({list,text}:{list:{text:string,link:string,content?:string[]}[],text:string}) {
+export default function MenuToolTip({list,text}:{list:{text:string,link?:string,content?:{text:string,link:string}[]}[],text:string}) {
 
     const [rotate,setRotate]=useState([-180,-180])
 
@@ -22,7 +22,7 @@ export default function MenuToolTip({list,text}:{list:{text:string,link:string,c
                 <AccordionItem aria-label="Accordion 1" onPress={() => rotation(0)}  title={<p>{text} <FaAngleDown className={`inline-block ml-1 rotate-${rotate[0]} transition-all ease-out duration-200`}/></p> }  >
                     <div className="flex flex-col ml-[30px] gap-[25px] mt-[17px] break-words">
                     {list.map((item,index)=>{
-                        if (!item.content){
+                        if (!item.content && item.link){
                             return (
                                 <Link key={`${item.text}-${index}`} className="w-fit text-xs 2xl:text-sm text-forground hover:text-cmr-gray-500 transition-all ease-out duration-200 " href={item.link}>
                                 {item.text}
@@ -34,10 +34,10 @@ export default function MenuToolTip({list,text}:{list:{text:string,link:string,c
                                 <AccordionItem aria-label="Accordion 2" onPress={() => rotation(1)} title={<p>{item.text} <FaAngleDown className={`inline-block ml-1 rotate-${rotate[1]} transition-all ease-out duration-200`}/></p> }>
                                 <div className="flex flex-col ml-[30px] gap-[25px] mt-[17px] break-words mr-2">
                                     {
-                                    item.content.map((itm,ind)=>{
+                                    item.content!.map((itm,ind)=>{
                                         return(
-                                            <Link key={`${itm}-${ind}`} className=" w-fit text-xs 2xl:text-sm text-forground hover:text-cmr-gray-500 transition-all ease-out duration-200 " href={item.link}>
-                                            {itm}
+                                            <Link key={`${itm}-${ind}`} className=" w-fit text-xs 2xl:text-sm text-forground hover:text-cmr-gray-500 transition-all ease-out duration-200 " href={itm.link}>
+                                            {itm.text}
                                             </Link>
                                             )
                                         })
