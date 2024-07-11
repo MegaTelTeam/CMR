@@ -30,6 +30,7 @@ export default function NavBar() {
     {text : "Über uns", link:"/aboutUs"},
     {text:"Kontakt", link:"/contact"},
     {text:"Datenschutzhinweise", link:"/privacyPolicy"},
+    {text:"Telefonstudio", link:"/telefonstudio"},
   ];
 
   return (

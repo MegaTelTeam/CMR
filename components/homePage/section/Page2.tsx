@@ -1,24 +1,24 @@
-"use client";
 
-import { useState } from "react";
 import Page2Box from "./Page2Box";
 
+
 const Page2 = () => {
-  const [dataCont, setData] = useState([
+  const dataCont =[
     {
       title: "Sind Sie ein Käseliebhaber?",
       desc: "Wir suchen Sie! Weitere Informationen sowie den Link zum Vorabinterview finden Sie hier.",
-      color: '#fecaca'
+      color: '#9415301A'
     },
     {
       title: "Sie wurden von uns angerufen? / Informationen für Probanden",
       desc: "Mehr Informationen finden Sie hier.",
-      color: '#9ca3af'
-    },
-  ]);
+      color: '#80808026'
+    }
+  ];
+
 
   return (
-    <section className="bg-violet-200 bg-opacity-40 min-h-[400px] w-full">
+    <section className="bg-[#EDEDF9] min-h-[400px] md:min-w-[1100px]">
       <div className="container mx-auto pt-[50px]">
         <ul className="grid gap-[50px] p-[40px] place-items-center md:place-items-start grid-cols-1 ">
           {dataCont.map((item) => (

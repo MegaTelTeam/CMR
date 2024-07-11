@@ -11,6 +11,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -20,10 +21,19 @@ const config: Config = {
         "cmr-red" : {
           500 : '#941530'
         },
+<<<<<<< HEAD
         "cmr-gray":{
           500 : "#808080",
           700: "#bfbfbf",
           900: "#ebebeb"
+=======
+        screens:{
+          sm: '576px',
+          md: '768px',
+          lg:"992px",
+          xl:"1200px",
+          '2xl': '1400px',
+>>>>>>> b4a19d36de5c1eeb1acd13487e0a3fe2a9150076
         }
       }
 
