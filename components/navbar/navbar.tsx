@@ -1,35 +1,14 @@
-"use client"
-import React, { useState } from "react";
-import { usePathname } from "next/navigation";
+
 import Image from "next/image";
 import Link from "next/link";
-import NavToolTip from "./users/navToolTip";
+import NavToolTip from "./navToolTip";
 import { Button, Divider } from "@nextui-org/react";
-import { Cross as Hamburger } from 'hamburger-react'
-import Humburger from "./users/humburger";
+import Humburger from "./humburger";
 import { menuItems } from "./menuItems";
-// import { useSession } from "next-auth/react";
-// import { useSupabase } from "@/providers/supabaseProvider";
+
 
 
 export default function NavBar() {
-  // const {data:session}=useSession()
-  // console.log(session)
-
-  // const client = useSupabase()
-  // client?.from("users").select("*").then((res)=>{
-  //   console.log(res)
-  // }).catch((err)=>{
-    
-  // })
-
-
-
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const pathName = usePathname()
-  const [isOpen, setOpen] = useState(false)
-    const onToggle = () => setOpen(!isOpen)
-
 
   return (
     <div className="relative w-full h-[124px] shadow-md overflow-x-clip mb-[13px]">

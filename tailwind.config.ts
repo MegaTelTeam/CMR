@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 import {nextui} from "@nextui-org/react";
-import { PluginAPI } from "tailwindcss/types/config";
+
 
 const config: Config = {
   content: [
@@ -28,15 +28,16 @@ const config: Config = {
           900: "#ebebeb"
         }
       },
-      screens:{
-        sm: '576px',
-        md: '768px',
-        lg:"992px",
-        xl:"1200px",
-        '2xl': '1400px',
+        screens:{
+          sm: '576px',
+          md: '768px',
+          lg:"992px",
+          xl:"1200px",
+          '2xl': '1400px',
+        }
       }
-    }
-  },
+
+    },
   darkMode: "class",
   plugins: [
     nextui(),
