@@ -17,7 +17,6 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-
       colors: {
         "cmr-red" : {
           500 : '#941530'
@@ -28,22 +27,16 @@ const config: Config = {
           900: "#ebebeb"
         }
       },
-<<<<<<< HEAD
-        
+        screens:{
+          sm: '576px',
+          md: '768px',
+          lg:"992px",
+          xl:"1200px",
+          '2xl': '1400px',
+        }
       }
 
     },
-=======
-      screens:{
-        sm: '576px',
-        md: '768px',
-        lg:"992px",
-        xl:"1200px",
-        '2xl': '1400px',
-      }
-    }
-  },
->>>>>>> f17824db349570d5036f0ef002290fe33d3dd046
   darkMode: "class",
   plugins: [
     nextui(),
