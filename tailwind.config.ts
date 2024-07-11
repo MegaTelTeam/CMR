@@ -10,6 +10,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -34,6 +35,13 @@ const config: Config = {
           200: '#f5f5f5',
           300: '#cccccc',
         },
+        screens:{
+          sm: '576px',
+          md: '768px',
+          lg:"992px",
+          xl:"1200px",
+          '2xl': '1400px',
+        }
       }
     },
   },

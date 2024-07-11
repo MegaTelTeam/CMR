@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/libre-franklin": "^5.0.18",
     "@nextui-org/react": "^2.4.1",
     "@supabase/supabase-js": "^2.43.4",
     "@uppy/core": "^3.12.0",
