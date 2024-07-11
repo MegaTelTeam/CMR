@@ -1,4 +1,4 @@
-import NavBar from "@/components/nav_bar";
+import NavBar from "@/components/navbar/navbar";
 import Image from "next/image"
 
 export default function RootLayout({

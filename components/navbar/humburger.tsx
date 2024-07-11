@@ -2,7 +2,7 @@
 import { Cross as Hamburger } from 'hamburger-react'
 import { useState } from 'react'
 import {motion} from "framer-motion"
-import { menuItems } from "../menuItems";
+import { menuItems } from "./menuItems";
 import Link from 'next/link';
 import MenuToolTip from './menuToolTip';
 
