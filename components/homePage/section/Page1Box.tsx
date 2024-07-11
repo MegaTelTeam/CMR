@@ -6,7 +6,9 @@ interface Page1BoxProps {
   icon: string;
 }
 
-const Page1Box: React.FC<Page1BoxProps> = ({ desc, icon }) => {
+
+
+function Page1Box({ desc, icon }: Page1BoxProps) {
   return (
     <div className="flex flex-col items-center md:items-start">
       <div className="mb-[40px] flex justify-center md:justify-start">
