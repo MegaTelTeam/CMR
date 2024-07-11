@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 .text-gradient {
-  background: linear-gradient(90deg, #000000 6.23%, #575757 23.53%, #808080 43.62%, #941530 87.68%);
+  background: linear-gradient(90deg, #000000 0%, #575757 43%, #808080 48.62%, #941530 63.68%);
   -webkit-background-clip: text;
   color: transparent;
   
 
 }
-
+.shadowButton{box-shadow: 0px 1px 6.6px 0px #00000040;
+}
 .shadowBox{
   box-shadow: 0px 1px 6.6px 0px #00000040;
 
