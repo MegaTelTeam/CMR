@@ -8,6 +8,7 @@ import MenuToolTip from './menuToolTip';
 
 
 export default function Humburger() {
+
     const [isOpen, setOpen] = useState(false)
     const onToggle = () => setOpen(!isOpen)
     
@@ -24,13 +25,13 @@ export default function Humburger() {
                 <div className='flex flex-col w-fit gap-[17px]'>
                 {
                     menuItems.map((item,index)=>{
-                        if(item.link) return (
+                        if(!item.list) return (
                             <Link key={`${item.text}-${index}`} className="group text-xs 2xl:text-sm text-forground hover:text-cmr-gray-500 transition-all ease-out duration-200 flex-shrink-0 py-[8px]" href={item.link ? item.link : ""}  >
                               {item.text}
                             </Link>
                           )
                           return (
-                            item.list && <MenuToolTip key={`${item.text}-${index}`} list={item.list} text={item.text}  />
+                            item.list && <MenuToolTip key={`${item.text}-${index}`} list={item.list} text={item.text} link={item.link} setOpen={setOpen}  />
                           )
                     })
                 }

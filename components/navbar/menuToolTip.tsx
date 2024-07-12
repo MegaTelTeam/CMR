@@ -1,10 +1,11 @@
 "use client"
-import { Accordion, AccordionItem } from "@nextui-org/react";
+import { Accordion, AccordionItem, Button } from "@nextui-org/react";
 import Link from "next/link";
 import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
+import { useRouter } from "next/router";
 
-export default function MenuToolTip({list,text}:{list:{text:string,link?:string,content?:{text:string,link:string}[]}[],text:string}) {
+export default function MenuToolTip({list,text,link,setOpen}:{list:{text:string,link?:string,content?:{text:string,link:string}[]}[],text:string,link:string,setOpen:React.Dispatch<React.SetStateAction<boolean>>}) {
 
     const [rotate,setRotate]=useState([-180,-180])
 
@@ -15,16 +16,20 @@ export default function MenuToolTip({list,text}:{list:{text:string,link?:string,
           });
     }
 
+    const OnClose = () => { 
+        setOpen(false)
+    }
+
     return (
         <div className="relative flex flex-col flex-shrink-0  ">
 
             <Accordion showDivider={false} className=" w-fit p-0" hideIndicator  isCompact itemClasses={{base: "py-0 w-full",title: "w-fit text-xs 2xl:text-sm text-forground hover:text-cmr-gray-500 transition-all ease-out duration-200 "}} >
-                <AccordionItem aria-label="Accordion 1" onPress={() => rotation(0)}  title={<p>{text} <FaAngleDown className={`inline-block ml-1 rotate-${rotate[0]} transition-all ease-out duration-200`}/></p> }  >
+                <AccordionItem aria-label="Accordion 1" onPress={() => rotation(0)}  title={<div className="flex gap-2 items-center"><Link href={link} onClick={OnClose}>{text}</Link><FaAngleDown className={`inline-block ml-1 rotate-${rotate[0]} transition-all ease-out duration-200`}/></div> }  >
                     <div className="flex flex-col ml-[30px] gap-[25px] mt-[17px] break-words">
                     {list.map((item,index)=>{
                         if (!item.content && item.link){
                             return (
-                                <Link key={`${item.text}-${index}`} className="w-fit text-xs 2xl:text-sm text-forground hover:text-cmr-gray-500 transition-all ease-out duration-200 " href={item.link}>
+                                <Link key={`${item.text}-${index}`} onClick={OnClose} className="w-fit text-xs 2xl:text-sm text-forground hover:text-cmr-gray-500 transition-all ease-out duration-200 " href={item.link}>
                                 {item.text}
                                 </Link>
                             )
@@ -36,7 +41,7 @@ export default function MenuToolTip({list,text}:{list:{text:string,link?:string,
                                     {
                                     item.content!.map((itm,ind)=>{
                                         return(
-                                            <Link key={`${itm}-${ind}`} className=" w-fit text-xs 2xl:text-sm text-forground hover:text-cmr-gray-500 transition-all ease-out duration-200 " href={itm.link}>
+                                            <Link key={`${itm}-${ind}`} onClick={OnClose} className=" w-fit text-xs 2xl:text-sm text-forground hover:text-cmr-gray-500 transition-all ease-out duration-200 " href={itm.link}>
                                             {itm.text}
                                             </Link>
                                             )
