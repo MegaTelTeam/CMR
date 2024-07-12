@@ -29,14 +29,14 @@ export default function NavBar() {
 
         {
           menuItems.map((item, index) => {
-            if(item.link) return (
-              <Link key={`${item.text}-${index}`} className="group text-xs 2xl:text-sm text-forground hover:text-cmr-gray-500 transition-all ease-out duration-200 flex-shrink-0" href={item.link ? item.link : ""}  >
+            if( !item.list) return (
+              <Link key={`${item.text}-${index}`} className="group text-xs 2xl:text-sm text-forground hover:text-cmr-gray-500 transition-all ease-out duration-200 flex-shrink-0" href={item.link}  >
                 {item.text}
                 <span className="block opacity-0 group-hover:opacity-100 transition-all ease-out duration-200 h-[1px] bg-cmr-red-500"></span>
               </Link>
             )
             return (
-              item.list && <NavToolTip key={index} list={item.list} text={item.text}  />
+              item.list && <NavToolTip key={index} list={item.list} text={item.text} link={item.link}  />
             )
           })
         }
