@@ -1,7 +1,9 @@
+// li 3andou link y7ottou lenna ma3a esm el page mta3ou 
+
 export const menuItems = [
     {text:"MARKTFORSCHUNG",link:"#" },
-    {text : "ÜBER UNS", link:"/aboutUs", list:[{text :"MITGLIEDSCHAFTEN",link:"Memberships"},{text:"STECKBRIEF",link:"#"}]},
-    {text:"KOMPETENZ" , link:"#" , list:[{text :"LEISTUNGSSPEKTRUM",link:"#"},{text:"THEMENSCHWERPUNKTE",link:"#"},{text :"METHODEN",link:"#"},  {text:"TELEFONSTUDIO",link:"/telefonstudio"},{text :"INSTRUMENTE",link:"#"},{text:"REFERENZPROJEKTE",  
+    {text : "ÜBER UNS", link:"/aboutUs", list:[{text :"MITGLIEDSCHAFTEN",link:"Memberships"},{text:"STECKBRIEF",link:"Steckbrief"}]},
+    {text:"KOMPETENZ" , link:"#" , list:[{text :"LEISTUNGSSPEKTRUM",link:"#"},{text:"THEMENSCHWERPUNKTE",link:"#"},{text :"METHODEN",link:"#"},  {text:"TELEFONSTUDIO",link:"/telefonstudio"},{text :"INSTRUMENTE",link:"#"},{text:"REFERENZPROJEKTE", link:"#",
       content: [
         {text : "PRINTMEDIEN", link:"#"},
         {text : "HÖRFUNK", link:"#"},
