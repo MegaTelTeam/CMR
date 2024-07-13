@@ -29,14 +29,14 @@ export async function getMenuItems({locale}: {locale: string}) : Promise<MenuIte
   return [
     {text:t("MARKTFORSCHUNG"),link:"#" },
     {text: t("ÜBER UNS"), link:"/aboutUs", list:[
-      {text: t("MITGLIEDSCHAFTEN"), link:"/Memberships"},
-      {text: t("STECKBRIEF"), link:"/Steckbrief"}
+      {text: t("MITGLIEDSCHAFTEN"), link:"/aboutUs/Memberships"},
+      {text: t("STECKBRIEF"), link:"/aboutUs/Steckbrief"}
     ]},
     {text: t("KOMPETENZ"), link:"/competence" , list:[
       {text: t("LEISTUNGSSPEKTRUM"),link:"/competence/Leistungsspektrum"},
       {text: t("THEMENSCHWERPUNKTE"),link:"/competence/Themenschwerpunkte"},
       {text: t("METHODEN"),link:"/competence/Methoden"},
-      {text: t("TELEFONSTUDIO"),link:"/telefonstudio"},
+      {text: t("TELEFONSTUDIO"),link:"/competence/Telefonstudio"},
       {text: t("INSTRUMENTE"),link:"#"},
       {text: t("REFERENZPROJEKTE"), link:"#",
         content: [
