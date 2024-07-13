@@ -6,14 +6,14 @@ export default function AboutUs() {
     <div className=" mx-[12vw] content-center">
       <Title title="Über uns" />
       <div className="flex  mt-14  flex-col md:flex-row  justify-center gap-20">
-        <div className="flex flex-col  ">
+        <div className="flex flex-col md:w-1/2  ">
           <p className="text-[24px] font-normal text-center md:text-left ">
             “Den Menschen im Blick. Den Markt im Visier.”
           </p>
 
           <p className="text-center md:text-left text-[14px]">Nach diesem Grundsatz handeln wir seit 1993.</p>
         </div>
-        <div className="flex flex-col  max-w-[531px] gap-7">
+        <div className="flex flex-col  md:w-1/2 gap-7">
           <p className="text-center md:text-left">
             Der Mensch mit seinen Einstellungen, Erwartungen, Wünschen, aber
             auch Widersprüchen steht im Mittelpunkt unserer Befragungen. Nur wer
