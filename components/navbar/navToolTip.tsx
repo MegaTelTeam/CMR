@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { FaAngleDown } from "react-icons/fa";
 
-export default function NavToolTip({list,text,link}:{list:{text:string,link?:string,content?:{text:string,link:string}[]}[],text:string,link:string}) {
+export default async function NavToolTip({list,text,link}:{list:{text:string,link?:string,content?:{text:string,link:string}[]}[],text:string,link:string}) {
+
 
     return (
         <div className="relative group hover:h-full flex items-center  flex-shrink-0">
@@ -12,7 +13,7 @@ export default function NavToolTip({list,text,link}:{list:{text:string,link?:str
             <span className="block opacity-0 group-hover:opacity-100 transition-all ease-out duration-200 h-[1px] bg-cmr-red-500"></span>
             </Link>
             <div className="absolute top-full z-10 ">
-            <div className="opacity-0 z-10 hidden group-hover:opacity-100  group-hover:flex flex-col gap-[2rem] shadow-md py-6 xl:py-8 border-1 bg-white ">
+            <div className="opacity-0 min-w-[207px] z-10 hidden group-hover:opacity-100  group-hover:flex flex-col gap-[2rem] shadow-md py-6 xl:py-8 border-1 bg-white ">
                 {list.map((item,index)=>{
                     if (!item.content && item.link){
                         

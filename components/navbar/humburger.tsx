@@ -2,12 +2,12 @@
 import { Cross as Hamburger } from 'hamburger-react'
 import { useState } from 'react'
 import {motion} from "framer-motion"
-import { menuItems } from "./menuItems";
 import Link from 'next/link';
 import MenuToolTip from './menuToolTip';
+import { MenuItem } from "./menuItems";
 
 
-export default function Humburger() {
+export default function Humburger({menuItems}:{menuItems:MenuItem}) {
 
     const [isOpen, setOpen] = useState(false)
     const onToggle = () => setOpen(!isOpen)

@@ -4,6 +4,7 @@ import "./globals.css";
 import NextUIProv from "../providers/nextProvider";
 import {AOSProvider} from "../providers/AOSProvider";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,13 +17,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="en">
       <body className={inter.className}>
         <NextUIProv>
           <AOSProvider>
             {children}
-          </AOSProvider>          
+          </AOSProvider>     
         </NextUIProv>
       </body>
     </html>

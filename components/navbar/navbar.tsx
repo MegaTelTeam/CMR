@@ -2,19 +2,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import NavToolTip from "./navToolTip";
-import { Button, Divider } from "@nextui-org/react";
 import Humburger from "./humburger";
-import { menuItems } from "./menuItems";
+import {getMenuItems} from "./menuItems";
+import LanguageChanger from "./languageButtons";
+import  I18nextProvider  from "@/providers/i18nProvider";
+import initTranslations from "@/app/i18n";
 
 
 
-export default function NavBar() {
+export default async function NavBar({locale}: {locale: string}) {
+
+  const menuItems = await getMenuItems({locale});
+
+  const { resources } = await initTranslations(locale, ["navbar"]);
 
   return (
+    
     <div className="relative w-full h-[124px] shadow-md overflow-x-clip mb-[13px]">
       <div className="h-full w-full relative  gap-[30px] sm:gap-[60px] lg:gap-[20px] xl:gap-[40px]  2xl:gap-[60px] 2xl:text-sm flex items-center justify-center">
 
-        <Humburger/>
+        <Humburger menuItems={menuItems}/>
 
         <div className="relative group/logo  ">
           <Image src="/logo.png" alt="C.M.R. Logo" width={99} height={124} className="flex-shrink-0 group-hover/logo:opacity-50 transition-all ease-out duration-200 "/>
@@ -36,18 +43,17 @@ export default function NavBar() {
               </Link>
             )
             return (
-              item.list && <NavToolTip key={index} list={item.list} text={item.text} link={item.link}  />
+              item.list && <NavToolTip key={index}  list={item.list} text={item.text} link={item.link}  />
             )
           })
         }
 
         </div>
 
-        <div className="flex items-center">
-          <Button isIconOnly radius="none" disableAnimation className="lg:text-xs xl:text-sm bg-transparent h-fit py-1 text-cmr-red-500 hover:text-cmr-red-500 transition-all ease-out duration-200 ">DE</Button>
-          <Divider orientation="vertical" className="bg-cmr-gray-700 w-[2px] h-[27px] "/>
-          <Button isIconOnly radius="none" disableAnimation className="lg:text-xs xl:text-sm bg-transparent h-fit py-1 text-cmr-gray-700 hover:text-cmr-red-500 transition-all ease-out duration-200">EN</Button>
-        </div>
+        <I18nextProvider namespaces={["navbar"]} locale={locale} resources={resources} >
+          <LanguageChanger/>
+        </I18nextProvider>
+
 
 
         </div>
