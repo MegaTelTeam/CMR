@@ -37,14 +37,14 @@ export async function getMenuItems({locale}: {locale: string}) : Promise<MenuIte
       {text: t("THEMENSCHWERPUNKTE"),link:"/competence/Themenschwerpunkte"},
       {text: t("METHODEN"),link:"/competence/Methoden"},
       {text: t("TELEFONSTUDIO"),link:"/competence/Telefonstudio"},
-      {text: t("INSTRUMENTE"),link:"#"},
-      {text: t("REFERENZPROJEKTE"), link:"#",
+      {text: t("INSTRUMENTE"),link:"/competence/instrumente"},
+      {text: t("REFERENZPROJEKTE"), link:"/competence/referenzprojekte",
         content: [
-          {text: t("PRINTMEDIEN"), link:"#"},
-          {text: t("HÖRFUNK"), link:"#"},
-          {text: t("INVESTITIONSGÜTER, IT, TK"), link:"#"},
-          {text: t("HANDEL, GASTRONOMIE"),link:"#"},
-          {text: t("MEINUNGSFORSCHUNG, POLITIK-UMFRAGEN"), link:"#"},
+          {text: t("PRINTMEDIEN"), link:"/competence/referenzprojekte/printmedien"},
+          {text: t("HÖRFUNK"), link:"/competence/referenzprojekte/horfunk"},
+          {text: t("INVESTITIONSGÜTER, IT, TK"), link:"/competence/referenzprojekte/investitionsguter"},
+          {text: t("HANDEL, GASTRONOMIE"),link:"/competence/referenzprojekte/handel-gastronomie"},
+          {text: t("MEINUNGSFORSCHUNG, POLITIK-UMFRAGEN"), link:"/competence/referenzprojekte/meinungsforschung-politik-umfragen"},
         ]}
     ]},
     {text: t("REFERENZEN"),  link:"#"  , list:[
