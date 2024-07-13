@@ -41,15 +41,15 @@ export async function getMenuItems({locale}: {locale: string}) : Promise<MenuIte
       {text: t("REFERENZPROJEKTE"), link:"#",
         content: [
           {text: t("PRINTMEDIEN"), link:"#"},
-          {text: t("HÖRFUNK"), link:"#"},
-          {text: t("INVESTITIONSGÜTER, IT, TK"), link:"#"},
-          {text: t("HANDEL, GASTRONOMIE"),link:"#"},
-          {text: t("MEINUNGSFORSCHUNG, POLITIK-UMFRAGEN"), link:"#"},
+          {text: t("HÖRFUNK"), link:"/horfunk"},
+          {text: t("INVESTITIONSGÜTER, IT, TK"), link:"/investitionsguter"},
+          {text: t("HANDEL, GASTRONOMIE"),link:"/handel-gastronomie"},
+          {text: t("MEINUNGSFORSCHUNG, POLITIK-UMFRAGEN"), link:"/meinungsforschung-politik-umfragen"},
         ]}
     ]},
     {text: t("REFERENZEN"),  link:"#"  , list:[
       {text: t("HÖRFUNKSENDER"),link:"#"},
-      {text: t("PRINTMEDIEN"),link:"#"},
+      {text: t("PRINTMEDIEN"),link:"/printmedien"},
       {text: t("LEBENSMITTEL"),link:"#"}
     ] },
     {text: t("AKTUELLES"),  link:"#"  , list:[

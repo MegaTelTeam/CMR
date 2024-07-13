@@ -13,8 +13,6 @@ export default function LanguageChanger() {
   const router = useRouter();
   const currentPathname = usePathname();
 
-  console.log(currentLocale);
-
   const handleChange = ( newLocale: string ) => {
     // set cookie for next-i18n-router
     const days = 30;
@@ -45,11 +43,6 @@ export default function LanguageChanger() {
           <Divider orientation="vertical" className="bg-cmr-gray-700 w-[2px] h-[27px] "/>
           <Button isIconOnly radius="none" onPress={() => handleChange('en')} disableAnimation className={cn("lg:text-xs xl:text-sm bg-transparent h-fit py-1  hover:text-cmr-red-500 transition-all ease-out duration-200 ", currentLocale === 'en' ? "text-cmr-red-500" : "text-cmr-gray-700")}>EN</Button>
     </div>
-        
-    // <select onChange={handleChange} value={currentLocale}>
-    //   <option value="en">English</option>
-    //   <option value="it">Italian</option>
-    //   <option value="fr">French</option>
-    // </select>
+
   );
 }
