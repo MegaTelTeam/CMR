@@ -40,19 +40,11 @@ export async function getMenuItems({locale}: {locale: string}) : Promise<MenuIte
       {text: t("INSTRUMENTE"),link:"/competence/instrumente"},
       {text: t("REFERENZPROJEKTE"), link:"/competence/referenzprojekte",
         content: [
-<<<<<<< HEAD
-          {text: t("PRINTMEDIEN"), link:"#"},
-          {text: t("HÖRFUNK"), link:"/horfunk"},
-          {text: t("INVESTITIONSGÜTER, IT, TK"), link:"/investitionsguter"},
-          {text: t("HANDEL, GASTRONOMIE"),link:"/handel-gastronomie"},
-          {text: t("MEINUNGSFORSCHUNG, POLITIK-UMFRAGEN"), link:"/meinungsforschung-politik-umfragen"},
-=======
           {text: t("PRINTMEDIEN"), link:"/competence/referenzprojekte/printmedien"},
           {text: t("HÖRFUNK"), link:"/competence/referenzprojekte/horfunk"},
           {text: t("INVESTITIONSGÜTER, IT, TK"), link:"/competence/referenzprojekte/investitionsguter"},
           {text: t("HANDEL, GASTRONOMIE"),link:"/competence/referenzprojekte/handel-gastronomie"},
-          {text: t("MEINUNGSFORSCHUNG, POLITIK-UMFRAGEN"), link:"/competence/referenzprojekte/meinungsforschung-politik-umfragen"},
->>>>>>> cdcd718c28c8207e743e9a6b8e2c670f96f3fcb8
+          {text: t("MEINUNGSFORSCHUNG, POLITIK-UMFRAGEN"), link:"/competence/referenzprojekte/meinungsforschung-politik-umfragen"}
         ]}
     ]},
     {text: t("REFERENZEN"),  link:"#"  , list:[
