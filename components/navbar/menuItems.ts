@@ -32,19 +32,19 @@ export async function getMenuItems({locale}: {locale: string}) : Promise<MenuIte
       {text: t("MITGLIEDSCHAFTEN"), link:"/aboutUs/Memberships"},
       {text: t("STECKBRIEF"), link:"/aboutUs/Steckbrief"}
     ]},
-    {text: t("KOMPETENZ"), link:"/competence" , list:[
-      {text: t("LEISTUNGSSPEKTRUM"),link:"/competence/Leistungsspektrum"},
-      {text: t("THEMENSCHWERPUNKTE"),link:"/competence/Themenschwerpunkte"},
-      {text: t("METHODEN"),link:"/competence/Methoden"},
-      {text: t("TELEFONSTUDIO"),link:"/competence/Telefonstudio"},
-      {text: t("INSTRUMENTE"),link:"/competence/instrumente"},
-      {text: t("REFERENZPROJEKTE"), link:"/competence/referenzprojekte",
+    {text: t("KOMPETENZ"), link:"/Kompetenz" , list:[
+      {text: t("LEISTUNGSSPEKTRUM"),link:"/Kompetenz/Leistungsspektrum"},
+      {text: t("THEMENSCHWERPUNKTE"),link:"/Kompetenz/Themenschwerpunkte"},
+      {text: t("METHODEN"),link:"/Kompetenz/Methoden"},
+      {text: t("TELEFONSTUDIO"),link:"/Kompetenz/Telefonstudio"},
+      {text: t("INSTRUMENTE"),link:"/Kompetenz/instrumente"},
+      {text: t("REFERENZPROJEKTE"), link:"/Kompetenz/referenzprojekte",
         content: [
-          {text: t("PRINTMEDIEN"), link:"/competence/referenzprojekte/printmedien"},
-          {text: t("HÖRFUNK"), link:"/competence/referenzprojekte/horfunk"},
-          {text: t("INVESTITIONSGÜTER, IT, TK"), link:"/competence/referenzprojekte/investitionsguter"},
-          {text: t("HANDEL, GASTRONOMIE"),link:"/competence/referenzprojekte/handel-gastronomie"},
-          {text: t("MEINUNGSFORSCHUNG, POLITIK-UMFRAGEN"), link:"/competence/referenzprojekte/meinungsforschung-politik-umfragen"}
+          {text: t("PRINTMEDIEN"), link:"/Kompetenz/referenzprojekte/printmedien"},
+          {text: t("HÖRFUNK"), link:"/Kompetenz/referenzprojekte/horfunk"},
+          {text: t("INVESTITIONSGÜTER, IT, TK"), link:"/Kompetenz/referenzprojekte/investitionsguter"},
+          {text: t("HANDEL, GASTRONOMIE"),link:"/Kompetenz/referenzprojekte/handel-gastronomie"},
+          {text: t("MEINUNGSFORSCHUNG, POLITIK-UMFRAGEN"), link:"/Kompetenz/referenzprojekte/meinungsforschung-politik-umfragen"}
         ]}
     ]},
     {text: t("REFERENZEN"),  link:"#"  , list:[
