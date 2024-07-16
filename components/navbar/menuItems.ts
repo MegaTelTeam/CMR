@@ -49,10 +49,10 @@ export async function getMenuItems({locale}: {locale: string}) : Promise<MenuIte
     ]},
     {text: t("REFERENZEN"),  link:"#"  , list:[
       {text: t("HÖRFUNKSENDER"),link:"#"},
-      {text: t("PRINTMEDIEN"),link:"/printmedien"},
+      {text: t("PRINTMEDIEN"),link:"//Kompetenz/referenzprojekte/printmedien"},
       {text: t("LEBENSMITTEL"),link:"#"}
     ] },
-    {text: t("AKTUELLES"),  link:"#"  , list:[
+    {text: t("AKTUELLES"),  link:"/aktuelles"  , list:[
       {text: t("KÄSELIEBHABER"),link:"#"}
     ] },
     {text: t("DATENSCHUTZ"), link:"#"},
