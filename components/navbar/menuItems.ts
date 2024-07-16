@@ -48,9 +48,9 @@ export async function getMenuItems({locale}: {locale: string}) : Promise<MenuIte
         ]}
     ]},
     {text: t("REFERENZEN"),  link:"#"  , list:[
-      {text: t("HÖRFUNKSENDER"),link:"#"},
-      {text: t("PRINTMEDIEN"),link:"//Kompetenz/referenzprojekte/printmedien"},
-      {text: t("LEBENSMITTEL"),link:"#"}
+      {text: t("HÖRFUNKSENDER"),link:"/Referenzen/Horfunksender"},
+      {text: t("PRINTMEDIEN"),link:"/Referenzen/Printmedien"},
+      {text: t("LEBENSMITTEL"),link:"/Referenzen/Lebensmittel"}
     ] },
     {text: t("AKTUELLES"),  link:"/aktuelles"  , list:[
       {text: t("KÄSELIEBHABER"),link:"#"}
