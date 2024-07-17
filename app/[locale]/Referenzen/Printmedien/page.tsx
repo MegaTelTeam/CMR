@@ -5,7 +5,7 @@ import images4 from "../../../../public/images/Printmedien/image (4).png"
 import images5 from "../../../../public/images/Printmedien/image (5).png"
 import images6 from "../../../../public/images/Printmedien/image (6).png"
 import images7 from "../../../../public/images/Printmedien/image (7).png"
-import ImagesScroll from "@/components/imagesScroll"
+import ImagesScroll from "@/components/imagesFade"
 
 export default function Printmedien(){
     const images = [images1,images2,images3,images4,images5,images6,images7]

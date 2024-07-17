@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 
-export default function ImagesScroll({images}:{
+export default function ImagesFade({images}:{
     images: StaticImageData[]
 }){
     const [currentVisible, setCurrentVisible] = useState(0)

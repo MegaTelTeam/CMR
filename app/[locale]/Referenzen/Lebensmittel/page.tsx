@@ -3,7 +3,7 @@ import images2 from "../../../../public/images/Lebensmittel/image (2).png"
 import images3 from "../../../../public/images/Lebensmittel/image (3).png"
 import images4 from "../../../../public/images/Lebensmittel/image (4).png"
 import images5 from "../../../../public/images/Lebensmittel/image (5).png"
-import ImagesScroll from "@/components/imagesScroll"
+import ImagesScroll from "@/components/imagesFade"
 
 export default function Lebensmittel(){
     const images = [images1,images2,images3,images4,images5]

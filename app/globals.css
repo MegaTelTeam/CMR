@@ -21,3 +21,12 @@
 body {
   font-family: 'Libre Franklin', sans-serif;
 }
+
+@layer utilities {
+  .paused {
+    animation-play-state: paused;
+  }
+  .shaded-edges{
+    mask: linear-gradient(90deg,transparent,white 20%,white 80%,transparent);
+  }
+}
