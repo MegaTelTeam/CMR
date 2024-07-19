@@ -23,7 +23,6 @@ import images22 from "../../../../public/images/Horfunksender/image (22).png"
 import images23 from "../../../../public/images/Horfunksender/image (23).png"
 import images24 from "../../../../public/images/Horfunksender/image (24).png"
 import ImagesScroll from "@/components/imagesFade"
-import Image from "next/image"
 
 export default function HorfunksenderPage(){
     const images = [images1,images2,images3,images4,images5,images6,images7,images8,images9,images10,images11,images12,images13,images14,images15,images16,images17,images18,images19,images20,images21,images22,images23,images24]
@@ -31,30 +30,12 @@ export default function HorfunksenderPage(){
     return (
         <div className="container mx-auto min-h-[calc(100vh-124px)] flex flex-col items-center">
             <h1 className="text-center col-span-3 lg:col-span-12 mt-5 mb-14">
-                <span className="text-4xl font-extrabold bg-gradient-to-r from-black via-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
+                <span className="text-4xl font-extrabold bg-gradient-to-r from-cmr-red-500 via-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
                     Hörfunksender
                 </span>
             </h1>
-            {/* <div className="w-full flex-grow relative">
+            <div className="w-full flex-grow relative">
                 <ImagesScroll images={images} />
-            </div> */}
-            <div className="items-center flex-grow pb-[20%] flex">
-                <div className="flex w-full overflow-hidden group shaded-edges">
-                <div className="flex flex-shrink-0 animate-loop-scroll gap-8 group-hover:paused flex-grow-0">
-                    {
-                        images.map((image,index) => (
-                            <Image key={index} src={image} width={80} alt="" className="flex-shrink-0 flex-grow-0" />
-                        ))
-                    }
-                </div>
-                <div className="flex flex-shrink-0 animate-loop-scroll gap-8 group-hover:paused flex-grow-0" aria-hidden="true">
-                    {
-                        images.map((image,index) => (
-                            <Image key={index+images.length} src={image} width={80} height={80} alt="" className="flex-shrink-0 flex-grow-0" />
-                        ))
-                    }
-                </div>
-                </div>
             </div>
         </div>
     )
