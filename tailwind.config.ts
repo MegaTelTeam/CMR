@@ -11,7 +11,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      
+      animation:{
+        "loop-scroll":"loop-scroll 30s infinite linear"
+      },
+      keyframes:{
+        "loop-scroll": {
+          from:{transform:"translateX(0)"},
+          to:{transform:"translateX(-100%)"}
+        }
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

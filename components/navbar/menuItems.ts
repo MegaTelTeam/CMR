@@ -32,13 +32,13 @@ export async function getMenuItems({locale}: {locale: string}) : Promise<MenuIte
       {text: t("MITGLIEDSCHAFTEN"), link:"/aboutUs/Memberships"},
       {text: t("STECKBRIEF"), link:"/aboutUs/Steckbrief"}
     ]},
-    {text: t("KOMPETENZ"), link:"/competence" , list:[
-      {text: t("LEISTUNGSSPEKTRUM"),link:"/competence/Leistungsspektrum"},
-      {text: t("THEMENSCHWERPUNKTE"),link:"/competence/Themenschwerpunkte"},
-      {text: t("METHODEN"),link:"/competence/Methoden"},
-      {text: t("TELEFONSTUDIO"),link:"/competence/Telefonstudio"},
-      {text: t("INSTRUMENTE"),link:"/competence/instrumente"},
-      {text: t("REFERENZPROJEKTE"), link:"/competence/referenzprojekte",
+    {text: t("KOMPETENZ"), link:"/Kompetenz" , list:[
+      {text: t("LEISTUNGSSPEKTRUM"),link:"/Kompetenz/Leistungsspektrum"},
+      {text: t("THEMENSCHWERPUNKTE"),link:"/Kompetenz/Themenschwerpunkte"},
+      {text: t("METHODEN"),link:"/Kompetenz/Methoden"},
+      {text: t("TELEFONSTUDIO"),link:"/Kompetenz/Telefonstudio"},
+      {text: t("INSTRUMENTE"),link:"/Kompetenz/instrumente"},
+      {text: t("REFERENZPROJEKTE"), link:"/Kompetenz/referenzprojekte", 
         content: [
           {text: t("PRINTMEDIEN"), link:"/competence/referenzprojekte/printmedien"},
           {text: t("HÖRFUNK"), link:"/competence/referenzprojekte/horfunk"},
@@ -48,11 +48,11 @@ export async function getMenuItems({locale}: {locale: string}) : Promise<MenuIte
         ]}
     ]},
     {text: t("REFERENZEN"),  link:"#"  , list:[
-      {text: t("HÖRFUNKSENDER"),link:"#"},
-      {text: t("PRINTMEDIEN"),link:"/printmedien"},
-      {text: t("LEBENSMITTEL"),link:"#"}
+      {text: t("HÖRFUNKSENDER"),link:"/Referenzen/Horfunksender"},
+      {text: t("PRINTMEDIEN"),link:"/Referenzen/Printmedien"},
+      {text: t("LEBENSMITTEL"),link:"/Referenzen/Lebensmittel"}
     ] },
-    {text: t("AKTUELLES"),  link:"#"  , list:[
+    {text: t("AKTUELLES"),  link:"/aktuelles"  , list:[
       {text: t("KÄSELIEBHABER"),link:"#"}
     ] },
     {text: t("DATENSCHUTZ"), link:"#"},
