@@ -30,7 +30,7 @@ export default function HorfunksenderPage(){
     return (
         <div className="container mx-auto min-h-[calc(100vh-124px)] flex flex-col items-center">
             <h1 className="text-center col-span-3 lg:col-span-12 mt-5 mb-14">
-                <span className="text-4xl font-extrabold bg-gradient-to-r from-cmr-red-500 via-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
+                <span className="text-4xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
                     Hörfunksender
                 </span>
             </h1>
