@@ -50,7 +50,8 @@ export async function getMenuItems({locale}: {locale: string}) : Promise<MenuIte
     {text: t("REFERENZEN"),  link:"#"  , list:[
       {text: t("HÖRFUNKSENDER"),link:"/Referenzen/Horfunksender"},
       {text: t("PRINTMEDIEN"),link:"/Referenzen/Printmedien"},
-      {text: t("LEBENSMITTEL"),link:"/Referenzen/Lebensmittel"}
+      {text: t("LEBENSMITTEL"),link:"/Referenzen/Lebensmittel"},
+      {text: "Prototype2",link:"/Referenzen/Prototype2"}
     ] },
     {text: t("AKTUELLES"),  link:"/aktuelles"  , list:[
       {text: t("KÄSELIEBHABER"),link:"#"}

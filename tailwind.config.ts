@@ -12,12 +12,17 @@ const config: Config = {
   theme: {
     extend: {
       animation:{
-        "loop-scroll":"loop-scroll 30s infinite linear"
+        "loop-scroll-left":"loop-scroll-left 30s infinite linear",
+        "loop-scroll-right":"loop-scroll-right 30s infinite linear"
       },
       keyframes:{
-        "loop-scroll": {
+        "loop-scroll-left": {
           from:{transform:"translateX(0)"},
           to:{transform:"translateX(-100%)"}
+        },
+        "loop-scroll-right": {
+          from:{transform:"translateX(-100%)"},
+          to:{transform:"translateX(0)"}
         }
       },
       backgroundImage: {
