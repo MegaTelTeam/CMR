@@ -133,7 +133,7 @@ export default function Prototype2(){
                 </span>
             </h1>
             
-            <div className="justify-center flex-grow pb-[20%] flex flex-col gap-8">
+            <div className="w-full justify-center flex-grow pb-[20%] flex flex-col gap-8">
                 <div className="flex w-full overflow-hidden group shaded-edges">
                     <div className="flex flex-shrink-0 animate-loop-scroll-left gap-8 group-hover:paused flex-grow-0">
                         {
