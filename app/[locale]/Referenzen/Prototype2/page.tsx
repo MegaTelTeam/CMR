@@ -127,13 +127,13 @@ export default function Prototype2(){
 
     return (
         <div className="container mx-auto min-h-[calc(100vh-124px)] flex flex-col items-center">
-            <h1 className="text-center mt-5 mb-14">
+            <h1 className="text-center mt-5">
                 <span className="text-4xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
                     Referenzen
                 </span>
             </h1>
             
-            <div className="w-full justify-center flex-grow pb-[20%] flex flex-col gap-8">
+            <div className="w-full justify-center flex-grow flex flex-col gap-8">
                 <div className="w-full flex flex-col items-center">
                     <h2 className="text-2xl font-bold">
                         <span className="text-2xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
