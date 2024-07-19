@@ -127,34 +127,47 @@ export default function Prototype2(){
 
     return (
         <div className="container mx-auto min-h-[calc(100vh-124px)] flex flex-col items-center">
-            <h1 className="text-center col-span-3 lg:col-span-12 mt-5 mb-14">
-                <span className="text-4xl font-extrabold bg-gradient-to-r from-cmr-red-500 via-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
-                    Prototype2
+            <h1 className="text-center mt-5 mb-14">
+                <span className="text-4xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
+                    Referenzen
                 </span>
             </h1>
             
             <div className="w-full justify-center flex-grow pb-[20%] flex flex-col gap-8">
-                <div className="flex w-full overflow-hidden group shaded-edges">
-                    <div className="flex flex-shrink-0 animate-loop-scroll-left gap-8 group-hover:paused flex-grow-0">
-                        {
-                            HorfunksenderImages.map((image,index) => (
-                                <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center">
-                                    <Image src={image} width={80} alt="" />
-                                </div>
-                            ))
-                        }
-                    </div>
-                    <div className="flex flex-shrink-0 animate-loop-scroll-left gap-8 group-hover:paused flex-grow-0" aria-hidden="true">
-                        {
-                            HorfunksenderImages.map((image,index) => (
-                                <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center">
-                                    <Image src={image} width={80} height={80} alt="" />
-                                </div>
-                            ))
-                        }
+                <div className="w-full flex flex-col items-center">
+                    <h2 className="text-2xl font-bold">
+                        <span className="text-2xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
+                            Horfunksender
+                        </span>
+                    </h2>
+                    <div className="flex w-full overflow-hidden group shaded-edges">
+                        <div className="flex flex-shrink-0 animate-loop-scroll-left gap-8 group-hover:paused flex-grow-0">
+                            {
+                                HorfunksenderImages.map((image,index) => (
+                                    <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center">
+                                        <Image src={image} width={80} alt="" />
+                                    </div>
+                                ))
+                            }
+                        </div>
+                        <div className="flex flex-shrink-0 animate-loop-scroll-left gap-8 group-hover:paused flex-grow-0" aria-hidden="true">
+                            {
+                                HorfunksenderImages.map((image,index) => (
+                                    <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center">
+                                        <Image src={image} width={80} height={80} alt="" />
+                                    </div>
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
 
+                <div className="w-full flex flex-col items-center">
+                <h2 className="text-2xl font-bold">
+                    <span className="text-2xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
+                        Printmedien
+                    </span>
+                </h2>
                 <div className="flex w-full overflow-hidden group shaded-edges">
                     <div className="flex flex-shrink-0 animate-loop-scroll-right gap-8 group-hover:paused flex-grow-0">
                         {
@@ -175,7 +188,14 @@ export default function Prototype2(){
                         }
                     </div>
                 </div>
+                </div>
 
+                <div className="w-full flex flex-col items-center">
+                <h2 className="text-2xl font-bold">
+                    <span className="text-2xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
+                        Lebensmittel
+                    </span>
+                </h2>
                 <div className="flex w-full overflow-hidden group shaded-edges">
                     <div className="flex flex-shrink-0 animate-loop-scroll-left gap-8 group-hover:paused flex-grow-0">
                         {
@@ -195,6 +215,7 @@ export default function Prototype2(){
                             ))
                         }
                     </div>
+                </div>
                 </div>
 
             </div>
