@@ -40,11 +40,11 @@ export async function getMenuItems({locale}: {locale: string}) : Promise<MenuIte
       {text: t("INSTRUMENTE"),link:"/Kompetenz/instrumente"},
       {text: t("REFERENZPROJEKTE"), link:"/Kompetenz/referenzprojekte", 
         content: [
-          {text: t("PRINTMEDIEN"), link:"/competence/referenzprojekte/printmedien"},
-          {text: t("HÖRFUNK"), link:"/competence/referenzprojekte/horfunk"},
-          {text: t("INVESTITIONSGÜTER, IT, TK"), link:"/competence/referenzprojekte/investitionsguter"},
-          {text: t("HANDEL, GASTRONOMIE"),link:"/competence/referenzprojekte/handel-gastronomie"},
-          {text: t("MEINUNGSFORSCHUNG, POLITIK-UMFRAGEN"), link:"/competence/referenzprojekte/meinungsforschung-politik-umfragen"},
+          {text: t("PRINTMEDIEN"), link:"/Kompetenz/referenzprojekte/printmedien"},
+          {text: t("HÖRFUNK"), link:"/Kompetenz/referenzprojekte/horfunk"},
+          {text: t("INVESTITIONSGÜTER, IT, TK"), link:"/Kompetenz/referenzprojekte/investitionsguter"},
+          {text: t("HANDEL, GASTRONOMIE"),link:"/Kompetenz/referenzprojekte/handel-gastronomie"},
+          {text: t("MEINUNGSFORSCHUNG, POLITIK-UMFRAGEN"), link:"/Kompetenz/referenzprojekte/meinungsforschung-politik-umfragen"},
         ]}
     ]},
     {text: t("REFERENZEN"),  link:"#"  , list:[
@@ -54,7 +54,7 @@ export async function getMenuItems({locale}: {locale: string}) : Promise<MenuIte
       {text: "Prototype2",link:"/Referenzen/Prototype2"}
     ] },
     {text: t("AKTUELLES"),  link:"/aktuelles"  , list:[
-      {text: t("KÄSELIEBHABER"),link:"#"}
+      {text: t("KÄSELIEBHABER"),link:"/aktuelles/archiv"}
     ] },
     {text: t("DATENSCHUTZ"), link:"#"},
     {text: t("KONTAKT"),  link:"#"  , list:[

@@ -6,7 +6,7 @@ export default async function Themenschwerpunkte({ params: { locale } }: { param
     return (
         <div className='container mx-auto grid grid-cols-3 lg:grid-cols-12 px-[10%] md:px-10 gap-12'>
             <h1 className="text-center col-span-3 lg:col-span-12 mt-5 mb-14">
-                <span className="text-4xl font-extrabold bg-gradient-to-r from-black via-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
+                <span className="text-4xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
                 {t("Themenschwerpunkte")}
                 </span>
             </h1>

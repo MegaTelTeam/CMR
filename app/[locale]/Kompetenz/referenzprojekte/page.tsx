@@ -1,22 +1,25 @@
 import Title from "@/components/Title";
 import Costum_Button from "@/components/Costum_Button";
-const page = () => {
+import initTranslations from "@/app/i18n";
+
+const page = async ({ params: { locale } }: { params: { locale: string } }) => {
+
+  const { t } = await initTranslations(locale, ['Referenzprojekte']);
+  
   return (
     <div className="mx-[12vw]">
-      <Title title="Referenzprojekte " />
+      <Title title={t("ReferenzprojekteTitle" )}/>
 
       <div className=" text-center my-12">
         <p>
-          Anbei eine Auswahl der von uns aktuell durchgeführten Untersuchungen
-          in den Bereichen Investitionsgüter, Handel | Gastronomie, Print,
-          Hörfunk und Meinungsforschung.
+          {t("Anbei eine Auswahl der von uns aktuell durchgeführten Untersuchungen in den Bereichen Investitionsgüter, Handel | Gastronomie, Print, Hörfunk und Meinungsforschung.")}
         </p>
       </div>
       <div className="flex justify-center flex-col items-center gap-8">
         <Costum_Button
           inside={true}
           link="/Kompetenz/referenzprojekte/printmedien"
-          text="Printmedien"
+          text={t("Printmedien")}
           displayIcon1={false}
           height={50}
           width={180}
@@ -24,7 +27,7 @@ const page = () => {
         <Costum_Button
           inside={true}
           link="/Kompetenz/referenzprojekte/horfunk"
-          text="Hörfunk"
+          text={t("Hörfunk")}
           displayIcon1={false}
           width={140}
           height={50}
@@ -32,7 +35,7 @@ const page = () => {
         <Costum_Button
           inside={true}
           link="/Kompetenz/referenzprojekte/investitionsguter"
-          text="Investitionsgüter, IT, Telekommunikation"
+          text={t("InvestitionsgüterITTelekommunikation")}
           displayIcon1={false}
           width={440}
           height={50}
@@ -40,7 +43,7 @@ const page = () => {
         <Costum_Button
           inside={true}
           link="/Kompetenz/referenzprojekte/handel-gastronomie"
-          text="Handel, Gastronomie"
+          text={t("HandelGastronomie")}
           displayIcon1={false}
           width={260}
           height={50}
@@ -48,7 +51,7 @@ const page = () => {
         <Costum_Button
           inside={false}
           link="/Kompetenz/referenzprojekte/meinungsforschung-politik-umfragen"
-          text="Meinungsforschung, Politik-Umfragen"
+          text={t("MeinungsforschungPolitikUmfragen")}
           displayIcon1={false}
           width={420}
           height={50}

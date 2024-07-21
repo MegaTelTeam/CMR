@@ -8,7 +8,7 @@ const page = async ({ params: { locale } }: { params: { locale: string } }) => {
   
   return (
     <div className="mx-[12vw]">
-      <Title title="Instrumente" />
+      <Title title={t("Instrumente")} />
       <div className=" text-center md:text-left my-12 ">
         <p>
           {t("Neben individuell erstellten Untersuchungskonzepten haben wir eigene")}

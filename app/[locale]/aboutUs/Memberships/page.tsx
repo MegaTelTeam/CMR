@@ -7,7 +7,7 @@ export default async function Memberships({ params: { locale } }: { params: { lo
     return(
         <div className="container mx-auto grid grid-cols-3 lg:grid-cols-12 grid-rows-2 gap-8 px-8 md:px:4 lg:px:2">
             <h1 className="text-center col-span-3 lg:col-span-12 mt-5 mb-14">
-                <span className="text-4xl font-extrabold bg-gradient-to-r from-black via-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
+                <span className="text-4xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
                     {t("Mitgliedschaften")}
                 </span>
             </h1>

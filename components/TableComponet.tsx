@@ -1,4 +1,8 @@
+
+import initTranslations from '@/app/i18n';
 import React from 'react';
+
+
 interface dataProps {
     Thema ?: string,
     Zielgruppe?:string ,
@@ -6,8 +10,10 @@ interface dataProps {
     Stichprobe? : string
 
 }
-const TableComponent = ({data} : {data: dataProps []}) => {
-  
+
+const TableComponent = async ({data , locale} : {data: dataProps [] , locale: string}) => {
+
+  const { t } = await initTranslations(locale, ['table']);
 
   return (
     <div className="flex justify-center overflow-x-scroll md:overflow-x-hidden">
@@ -17,22 +23,22 @@ const TableComponent = ({data} : {data: dataProps []}) => {
             <th
               className=" px-2.5 py-5 text-left text-base font-light w-[29%] min-w-[120px]"
             >
-              Thema
+              {t("Thema")}
             </th>
             <th
               className="px-2.5 py-5 text-left text-base font-light w-[28%] min-w-[120px]"
             >
-              Zielgruppe
+              {t("Zielgruppe")}
             </th>
             <th
               className="px-2.5 py-5 text-left text-base font-light w-[29%] min-w-[120px]"
             >
-              Methode
+              {t("Methode")}
             </th>
             <th
               className="px-2.5 py-5 text-left text-base font-light w-[13%] min-w-[120px]"
             >
-              Stichprobe
+              {t("Stichprobe")}
             </th>
           </tr>
         </thead>
