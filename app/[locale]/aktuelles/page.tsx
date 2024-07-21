@@ -4,16 +4,19 @@ import Costum_Button from "@/components/Costum_Button";
 import Actuelle_section from "@/components/Actuelle_section";
 import Image from "next/image";
 import Link from "next/link";
-const page = () => {
+import initTranslations  from "../../i18n";
+
+const page = async ({ params: { locale } }: { params: { locale: string } }) => {
+  const { t } = await initTranslations(locale, ['aktuelles']);
+
   return (
     <div className="px-[12vw]">
-      <Title title="Aktuelles" />
+      <Title title={t("Aktuelles")} />
       <div className="flex flex-col gap-[50px] mt-12">
         
         <Actuelle_section>
         <p>
-              Sind Sie ein Käseliebhaber? Wir suchen Sie! Weitere Informationen
-              sowie den Link zum Vorabinterview finden Sie
+            {t("Sind Sie ein Käseliebhaber? Wir suchen Sie! Weitere Informationen sowie den Link zum Vorabinterview finden Sie")}
             </p>
             <Costum_Button 
             text_className="font-medium text-xl"
@@ -28,23 +31,18 @@ const page = () => {
         
         <Actuelle_section>
           <p className="font-medium text-2xl">
-            Meinungsumfrage zur Oberbürgermeisterwahl am 23. September 2018 in
-            Zweibrücken
+            {t("Meinungsumfrage zur Oberbürgermeisterwahl am 23. September 2018 in Zweibrücken")}
           </p>
           <p>
-            Am 23. September wählt Zweibrücken einen neuen Oberbürgermeister.
-            Die RHEINPFALZ hat mittels einer Meinungsumfrage den Zuspruch für
-            die Kandidaten ermittelt. Ein wichtiges Ergebnis: Kurz vor der Wahl
-            wissen mehr als ein Drittel der Zweibrücker noch nicht, ob und wen
-            sie wählen. Deshalb bleibt das Rennen offen, auch wenn die Abstände
-            vorm Endspurt groß sind. Artikel aus der Rheinpfalz zur
-            Oberbürgermeisterwahl in Zweibrücken: 
+            {t(
+              "Am 23. September wählt Zweibrücken einen neuen Oberbürgermeister. Die RHEINPFALZ hat mittels einer Meinungsumfrage den Zuspruch für die Kandidaten ermittelt. Ein wichtiges Ergebnis: Kurz vor der Wahl wissen mehr als ein Drittel der Zweibrücker noch nicht, ob und wen sie wählen. Deshalb bleibt das Rennen offen, auch wenn die Abstände vorm Endspurt groß sind.")}
+            &nbsp;{t("Artikel aus der Rheinpfalz zur Oberbürgermeisterwahl in Zweibrücken:")} 
           </p>
           <div className="flex flex-col md:flex-row gap-5">
             <Costum_Button
               inside={true}
               link="#"
-              text="Seite 1"
+              text={t("Seite") + " 1"}
               height={50}
               width={190}
               text_className="font-medium text-xl"
@@ -52,7 +50,7 @@ const page = () => {
             <Costum_Button
               inside={true}
               link="#"
-              text="Seite 2"
+              text={t("Seite") + " 2"}
               height={50}
               width={190}
               text_className="font-medium text-xl"
@@ -60,7 +58,7 @@ const page = () => {
             <Costum_Button
               inside={true}
               link="#"
-              text="Seite 3"
+              text={t("Seite") + " 3"}
               height={50}
               width={190}
               text_className="font-medium text-xl"
@@ -68,22 +66,13 @@ const page = () => {
           </div>
         </Actuelle_section>
         <Actuelle_section>
-          <p className="font-medium text-2xl">
-            Stimmungsbild zur Oberbürgermeisterwahl 2018 in Speyer
-          </p>
-          <p>
-            Wenn heute Oberbürgermeisterwahl wäre, gäbe es ein
-            Kopf-an-Kopf-Rennen zwischen Amtsinhaber Hansjörg Eger (CDU) und der
-            Beigeordneten Stefanie Seiler (SPD). Dieses Stimmungsbild hat eine
-            repräsentative Meinungsumfrage im Auftrag der RHEINPFALZ
-            ergeben.Artikel aus der Rheinpfalz zur Oberbürgermeisterwahl in
-            Speyer: 
-          </p>
+          <p className="font-medium text-2xl">{t("Stimmungsbild zur Oberbürgermeisterwahl 2018 in Speyer")}</p>
+          <p>{t("Wenn heute Oberbürgermeisterwahl wäre, gäbe es ein Kopf-an-Kopf-Rennen zwischen amtinhaber Hansjörg Eger (CDU) und der Beigeordneten Stefanie Seiler (SPD). Dieses Stimmungsbild hat eine repräsentative Meinungsumfrage im Auftrag der RHEINPFALZ ergeben.Artikel aus der Rheinpfalz zur Oberbürgermeisterwahl in Speyer:")}</p>
           <div className="flex flex-col md:flex-row gap-5">
             <Costum_Button
               inside={true}
               link="#"
-              text="Seite 1"
+              text={t("Seite" ) + " 1"}
               height={50}
               width={190}
               text_className="font-medium text-xl"
@@ -91,7 +80,7 @@ const page = () => {
             <Costum_Button
               inside={true}
               link="#"
-              text="Seite 2"
+              text={t("Seite" ) + " 2"}
               height={50}
               width={190}
               text_className="font-medium text-xl"
@@ -99,21 +88,13 @@ const page = () => {
           </div>
         </Actuelle_section>
         <Actuelle_section>
-          <p className="font-medium text-2xl">
-            Repräsentative Meinungsumfrage zu Ehrung für Altbundeskanzler in
-            Speyer – Helmut-Kohl-Ufer
-          </p>
-          <p>
-            Das Stadtratsvotum vom 15. März, die Rheinpromenade in
-            „Helmut-Kohl-Ufer“ umzubenennen, ist mit dem Bürgerwillen vereinbar.
-            Das ist das Ergebnis einer repräsentativen Umfrage unter 500
-            Speyerern im Auftrag der RHEINPFALZ.
-          </p>
+          <p className="font-medium text-2xl">{t("Repräsentative Meinungsumfrage zu Ehrung für Altbundeskanzler in Speyer – Helmut-Kohl-Ufer")}</p>
+          <p>{t("Das Stadtratsvotum vom 15.März, die Rheinpromenade in")} {`"Helmut-Kohl-Ufer"`} {t("umzubenennen, ist mit dem Bürgerwillen vereinbar.")} {t("Das ist das Ergebnis einer repräsentativen Umfrage unter 500")} Speyerern {t("im Auftrag der RHEINPFALZ.")}</p>
           <div>
             <Costum_Button
               inside={true}
               link="#"
-              text="Artikel aus der Speyerer Rundschau  "
+              text={t("Artikel aus der Speyerer Rundschau")}
               height={50}
               width={470}
               text_className="font-medium text-xl"
@@ -121,22 +102,13 @@ const page = () => {
           </div>
         </Actuelle_section>
         <Actuelle_section>
-          <p className="font-medium text-2xl">
-            Wahlbarometer für den Wahlkreis 268 Schwäbisch Hall-Hohenlohe, vom
-            28. und 29. August sowie vom 4. bis 6. September
-          </p>
-          <p>
-            Das Meinungsforschungsinstitut C.M.R. hat im Auftrag von Haller
-            Tagblatt, Hohenloher Tagblatt und Rundschau Gaildorf im
-            Bundestagswahlkreis Schwäbisch Hall-Hohenlohe in der KW 35 sowie 36
-            Umfragen durchgeführt, um das Stimmungsbild der Bevölkerung zu
-            erfassen. Artikel zur Bundestagswahl im Hohenloher Tagblatt:
-          </p>
+          <p className="font-medium text-2xl">{t("Wahlbarometer für den Wahlkreis 268 Schwäbisch Hall-Hohenlohe, vom 28. und 29. August sowie vom 4. bis 6. September")}</p>
+          <p>{t("Das Meinungsforschungsinstitut C.M.R. hat im Auftrag von Haller Tagblatt, Hohenloher Tagblatt und Rundschau Gaildorf im Bundestagswahlkreis Schwäbisch Hall-Hohenlohe in der KW 35 sowie 36 Umfragen durchgeführt, um das Stimmungsbild der Bevölkerung zu erfassen. Artikel zur Bundestagswahl im Hohenloher Tagblatt:")}</p>
           <div>
             <Costum_Button
               inside={true}
               link="#"
-              text="Hohenloher Tagblatt KW35 Hohenloher Tagblatt KW36  "
+              text={t("Hohenloher Tagblatt KW35 Hohenloher Tagblatt KW36  ")}
               height={50}
               width={650}
               text_className="font-medium text-xl"
@@ -144,20 +116,13 @@ const page = () => {
           </div>
         </Actuelle_section>
         <Actuelle_section>
-          <p className="font-medium text-2xl">
-            Meinungsumfrage zur Oberbürgermeisterwahl am 24. September 2017 in
-            Ludwigshafen am Rhein
-          </p>
-          <p>
-            C.M.R. führte im Auftrage der RHEINPFALZ eine repräsentative
-            Meinungsumfrage durch. Eine Stichwahl ist wahrscheinlich.Artikel zur
-            OB-Wahl in Luwigshafen:
-          </p>
+          <p className="font-medium text-2xl">{t("Meinungsumfrage zur Oberbürgermeisterwahl am 24. September 2017 in Ludwigshafen am Rhein")}</p>
+          <p>{t("C.M.R. führte im Auftrage der RHEINPFALZ eine repräsentative Meinungsumfrage durch. Eine Stichwahl ist wahrscheinlich.Artikel zur OB-Wahl in Luwigshafen:")}</p>
           <div className="flex flex-col md:flex-row gap-5">
             <Costum_Button
               inside={true}
               link="#"
-              text="Seite 1"
+              text={t("Seite") + " 1"}
               height={50}
               width={190}
               text_className="font-medium text-xl"
@@ -165,7 +130,7 @@ const page = () => {
             <Costum_Button
               inside={true}
               link="#"
-              text="Seite 2"
+              text={t("Seite") + " 2"}
               height={50}
               width={190}
               text_className="font-medium text-xl"

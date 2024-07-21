@@ -23,15 +23,17 @@ import images22 from "../../../../public/images/Horfunksender/image (22).png"
 import images23 from "../../../../public/images/Horfunksender/image (23).png"
 import images24 from "../../../../public/images/Horfunksender/image (24).png"
 import ImagesScroll from "@/components/imagesFade"
+import initTranslations  from "../../../i18n";
 
-export default function HorfunksenderPage(){
+export default async function HorfunksenderPage({ params: { locale } }: { params: { locale: string } }){
     const images = [images1,images2,images3,images4,images5,images6,images7,images8,images9,images10,images11,images12,images13,images14,images15,images16,images17,images18,images19,images20,images21,images22,images23,images24]
+    const { t } = await initTranslations(locale, ['Referenzen']);
 
     return (
         <div className="container mx-auto min-h-[calc(100vh-124px)] flex flex-col items-center">
             <h1 className="text-center col-span-3 lg:col-span-12 mt-5 mb-14">
                 <span className="text-4xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
-                    Hörfunksender
+                    {t('Horfunksender')}
                 </span>
             </h1>
             <div className="w-full flex-grow relative">
