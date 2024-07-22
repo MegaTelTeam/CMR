@@ -38,9 +38,12 @@ import PrintmedienImages6 from "../../../../public/images/Printmedien/image (6).
 import PrintmedienImages7 from "../../../../public/images/Printmedien/image (7).png"
 
 import Image from "next/image"
+import initTranslations  from "../../../i18n";
 
 
-export default function Prototype2(){
+export default async function Prototype2({ params: { locale } }: { params: { locale: string } }){
+    const { t } = await initTranslations(locale, ['Referenzen']);
+
     const HorfunksenderImages = [
         HorfunksenderImage1,
         HorfunksenderImage2,
@@ -122,30 +125,34 @@ export default function Prototype2(){
         PrintmedienImages7,
         PrintmedienImages1,
         PrintmedienImages2,
-        PrintmedienImages3
+        PrintmedienImages3,
+        PrintmedienImages4,
+        PrintmedienImages5,
+        PrintmedienImages6,
+        PrintmedienImages7,
     ]
 
     return (
         <div className="container mx-auto min-h-[calc(100vh-124px)] flex flex-col items-center">
             <h1 className="text-center mt-5">
                 <span className="text-4xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
-                    Referenzen
+                    {t("Referenzen")}
                 </span>
             </h1>
             
             <div className="w-full justify-center flex-grow flex flex-col gap-8">
-                <div className="w-full flex flex-col items-center">
+                <div className="w-full flex flex-col items-center gap-2">
                     <h2 className="text-2xl font-bold">
                         <span className="text-2xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
-                            Horfunksender
+                            {t("Horfunksender")} 
                         </span>
                     </h2>
                     <div className="flex w-full overflow-hidden group shaded-edges">
                         <div className="flex flex-shrink-0 animate-loop-scroll-left gap-8 group-hover:paused flex-grow-0">
                             {
                                 HorfunksenderImages.map((image,index) => (
-                                    <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center">
-                                        <Image src={image} width={80} alt="" />
+                                    <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center w-[150px]">
+                                        <Image src={image} width={122} alt="" />
                                     </div>
                                 ))
                             }
@@ -153,8 +160,8 @@ export default function Prototype2(){
                         <div className="flex flex-shrink-0 animate-loop-scroll-left gap-8 group-hover:paused flex-grow-0" aria-hidden="true">
                             {
                                 HorfunksenderImages.map((image,index) => (
-                                    <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center">
-                                        <Image src={image} width={80} height={80} alt="" />
+                                    <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center w-[150px]">
+                                        <Image src={image} width={122} alt="" />
                                     </div>
                                 ))
                             }
@@ -162,27 +169,27 @@ export default function Prototype2(){
                     </div>
                 </div>
 
-                <div className="w-full flex flex-col items-center">
+                <div className="w-full flex flex-col items-center gap-2">
                 <h2 className="text-2xl font-bold">
                     <span className="text-2xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
-                        Printmedien
+                        {t("Printmedien")} 
                     </span>
                 </h2>
                 <div className="flex w-full overflow-hidden group shaded-edges">
-                    <div className="flex flex-shrink-0 animate-loop-scroll-right gap-8 group-hover:paused flex-grow-0">
+                    <div className="flex flex-shrink-0 animate-loop-scroll-left gap-8 group-hover:paused flex-grow-0">
                         {
                             PrintmedienImages.map((image,index) => (
-                                <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center">
-                                    <Image src={image} width={80} alt="" />
+                                <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center w-[150px]">
+                                    <Image src={image} width={122} alt="" />
                                 </div>
                             ))
                         }
                     </div>
-                    <div className="flex flex-shrink-0 animate-loop-scroll-right gap-8 group-hover:paused flex-grow-0" aria-hidden="true">
+                    <div className="flex flex-shrink-0 animate-loop-scroll-left gap-8 group-hover:paused flex-grow-0" aria-hidden="true">
                         {
                             PrintmedienImages.map((image,index) => (
-                                <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center">
-                                    <Image src={image} width={80} height={80} alt="" />
+                                <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center w-[150px]">
+                                    <Image src={image} width={122} alt="" />
                                 </div>
                             ))
                         }
@@ -190,18 +197,18 @@ export default function Prototype2(){
                 </div>
                 </div>
 
-                <div className="w-full flex flex-col items-center">
+                <div className="w-full flex flex-col items-center gap-2">
                 <h2 className="text-2xl font-bold">
                     <span className="text-2xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
-                        Lebensmittel
+                        {t("Lebensmittel")}  
                     </span>
                 </h2>
                 <div className="flex w-full overflow-hidden group shaded-edges">
                     <div className="flex flex-shrink-0 animate-loop-scroll-left gap-8 group-hover:paused flex-grow-0">
                         {
                             LebensmittelImages.map((image,index) => (
-                                <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center">
-                                    <Image src={image} width={80} alt="" />
+                                <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center w-[150px]">
+                                    <Image src={image} width={122} alt="" />
                                 </div>
                             ))
                         }
@@ -209,17 +216,15 @@ export default function Prototype2(){
                     <div className="flex flex-shrink-0 animate-loop-scroll-left gap-8 group-hover:paused flex-grow-0" aria-hidden="true">
                         {
                             LebensmittelImages.map((image,index) => (
-                                <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center">
-                                    <Image src={image} width={80} height={80} alt="" />
+                                <div key={index} className="flex-shrink-0 flex-grow-0 flex justify-center items-center w-[150px]">
+                                    <Image src={image} width={122} alt="" />
                                 </div>
                             ))
                         }
                     </div>
                 </div>
                 </div>
-
             </div>
-            
         </div>
     )
 }

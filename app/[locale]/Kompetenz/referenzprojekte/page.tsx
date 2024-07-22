@@ -4,7 +4,7 @@ import initTranslations from "@/app/i18n";
 
 const page = async ({ params: { locale } }: { params: { locale: string } }) => {
 
-  const { t } = await initTranslations(locale, ['Referenzprojekte']);
+  const { t } = await initTranslations(locale, ['referenzprojekte']);
   
   return (
     <div className="mx-[12vw]">

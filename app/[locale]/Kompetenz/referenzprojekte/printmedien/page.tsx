@@ -2,7 +2,6 @@ import TableComponent from '@/components/TableComponet'
 import Title from '@/components/Title'
 import React from 'react'
 import initTranslations from "@/app/i18n";
-import I18nextProvider  from '@/providers/i18nProvider';
 
 const page = async ({ params: { locale } }: { params: { locale: string } }) => {
 
@@ -66,7 +65,7 @@ const page = async ({ params: { locale } }: { params: { locale: string } }) => {
     {
       Thema: t("Optimierung eines Hochschulmagazins"),
       Zielgruppe: t("Professoren, Dozenten, wissenschaftliche Mitarbeiter"),
-      Methode: t("2 Gruppendiskussionen, Telefonische Interviews (CATI)"),
+      Methode: t("2 Gruppendiskussionen, Telefonische Interviews (CATI)"), //
       Stichprobe: "n = 250"
     },
     {

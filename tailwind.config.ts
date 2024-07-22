@@ -12,8 +12,8 @@ const config: Config = {
   theme: {
     extend: {
       animation:{
-        "loop-scroll-left":"loop-scroll-left 30s infinite linear",
-        "loop-scroll-right":"loop-scroll-right 30s infinite linear"
+        "loop-scroll-left":"loop-scroll-left 60s infinite linear",
+        "loop-scroll-right":"loop-scroll-right 60s infinite linear"
       },
       keyframes:{
         "loop-scroll-left": {
