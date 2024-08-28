@@ -63,7 +63,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
                 <h2 className="text-2xl font-semibold">{t("Sind Sie ein Käseliebhaber?")}</h2>
                 <p>{t("Wir suchen Sie! Weitere Informationen sowie den Link zum Vorabinterview finden Sie hier.")}</p>
               </div>
-              <Link href="#" className="z-10 w-fit">
+              <Link href="#" className="z-10 w-fit ">
                 <FaArrowDownLong size={22}/>
               </Link>
             </div>
