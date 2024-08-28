@@ -2,13 +2,14 @@ import initTranslations from "@/app/i18n";
 
 export default async function Kompetenz({ params: { locale } }: { params: { locale: string } }) {
 
-    const { t } = await initTranslations(locale, ['Leistungsspektrum', 'navbar']);
+    const { t } = await initTranslations(locale, ['Leistungsspektrum']);
     
     return(
+
         <div className='container mx-auto grid grid-cols-3 lg:grid-cols-12 px-[10%] md:px-10 gap-12'>
             <h1 className="text-center col-span-3 lg:col-span-12 mt-5 mb-14">
-                <span className="text-4xl font-extrabold bg-gradient-to-r from-black via-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
-                {t("Kompetenz")}
+                <span className="text-4xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
+                {t("Kompetenz")[0].toUpperCase()+t("Kompetenz").slice(1)}
                 </span>
             </h1>
 
@@ -35,5 +36,6 @@ export default async function Kompetenz({ params: { locale } }: { params: { loca
                 {t("p1")}
             </p>
         </div>
+
     )
 }

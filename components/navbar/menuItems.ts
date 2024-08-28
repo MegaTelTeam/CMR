@@ -38,13 +38,13 @@ export async function getMenuItems({locale}: {locale: string}) : Promise<MenuIte
       {text: t("METHODEN"),link:"/Kompetenz/Methoden"},
       {text: t("TELEFONSTUDIO"),link:"/Kompetenz/Telefonstudio"},
       {text: t("INSTRUMENTE"),link:"/Kompetenz/instrumente"},
-      {text: t("REFERENZPROJEKTE"), link:"/Kompetenz/referenzprojekte",
+      {text: t("REFERENZPROJEKTE"), link:"/Kompetenz/referenzprojekte", 
         content: [
           {text: t("PRINTMEDIEN"), link:"/Kompetenz/referenzprojekte/printmedien"},
           {text: t("HÖRFUNK"), link:"/Kompetenz/referenzprojekte/horfunk"},
           {text: t("INVESTITIONSGÜTER, IT, TK"), link:"/Kompetenz/referenzprojekte/investitionsguter"},
           {text: t("HANDEL, GASTRONOMIE"),link:"/Kompetenz/referenzprojekte/handel-gastronomie"},
-          {text: t("MEINUNGSFORSCHUNG, POLITIK-UMFRAGEN"), link:"/Kompetenz/referenzprojekte/meinungsforschung-politik-umfragen"}
+          {text: t("MEINUNGSFORSCHUNG, POLITIK-UMFRAGEN"), link:"/Kompetenz/referenzprojekte/meinungsforschung-politik-umfragen"},
         ]}
     ]},
     {text: t("REFERENZEN"),  link:"#"  , list:[

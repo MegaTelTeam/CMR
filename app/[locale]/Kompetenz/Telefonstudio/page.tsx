@@ -8,7 +8,7 @@ export default async function Telefonstudio({ params: { locale } }: { params: { 
     return (
         <div className='container mx-auto px-[10%] md:px-10 space-y-24'>
             <h1 className="text-center mt-5 mb-14">
-                <span className="text-4xl font-extrabold bg-gradient-to-r from-black via-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
+                <span className="text-4xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
                     {t("Telefonstudio")}
                 </span>
             </h1>

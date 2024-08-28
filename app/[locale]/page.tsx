@@ -60,8 +60,8 @@ export default async function Home({ params: { locale } }: { params: { locale: s
             <div className="absolute bg-cmr-gray-500 opacity-10 size-full"/>
             <div className="p-6 flex flex-col lg:flex-row gap-y-2 lg:gap-y-0 items-end lg:items-center lg:justify-between">
               <div className="z-10">
-                <h2 className="text-2xl font-semibold">{t("Sind Sie ein Käseliebhaber?")}</h2>
-                <p>{t("Wir suchen Sie! Weitere Informationen sowie den Link zum Vorabinterview finden Sie hier.")}</p>
+                <h2 className="text-2xl font-semibold">{t("Sie wurden von uns angerufen? / Informationen für Probanden")}</h2>
+                <p>{t("Mehr Informationen finden Sie hier. ")}</p>
               </div>
               <Link href="#" className="z-10 w-fit ">
                 <FaArrowDownLong size={22}/>
