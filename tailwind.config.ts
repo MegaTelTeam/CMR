@@ -33,6 +33,7 @@ const config: Config = {
       },
       colors: {
         "cmr-red" : {
+          400: '#B12F3F',
           500 : '#941530'
         },
         "cmr-gray":{

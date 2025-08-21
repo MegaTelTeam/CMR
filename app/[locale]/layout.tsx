@@ -1,6 +1,8 @@
 import Footer from "@/components/footer/footer";
 import NavBar from "@/components/navbar/navbar";
 import Image from "next/image"
+import I18nextProvider  from "@/providers/i18nProvider";
+import initTranslations from "@/app/i18n";
 
 
 export default async function RootLayout({
@@ -9,12 +11,24 @@ export default async function RootLayout({
     children: React.ReactNode;
     params: { locale: string };
   }>) {
+    const { resources } = await initTranslations(locale, ["navbar"]);
 
     return (
-        <main className="">
+        <main className="w-full">
 
-            <NavBar locale={locale}/>
-            <Image src="/bg_logo.png" alt="logo" width={318.34} height={567} className="absolute sm:left-[10%] lg:left-[15%]"/>
+            <I18nextProvider namespaces={["navbar"]} locale={locale} resources={resources} >
+              <NavBar/>
+            </I18nextProvider>
+            <div className="w-full relative container mx-auto">
+              <Image
+                src="/heroImage.png"
+                alt="logo"
+                width={1120}
+                height={289}
+                style={{ width: "100%", height: "auto" }}
+                className="w-full h-auto"
+              />
+            </div>
               <div className="min-h-[calc(100dvh-124px)] ">{children}</div>
             <Footer/>
 

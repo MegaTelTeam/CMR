@@ -38,10 +38,10 @@ export default function LanguageChanger() {
 
   return (
 
-    <div className="flex items-center">
-          <Button isIconOnly radius="none" onPress={() => handleChange('de')} disableAnimation className={cn("lg:text-xs xl:text-sm bg-transparent h-fit py-1  hover:text-cmr-red-500 transition-all ease-out duration-200 ", currentLocale === 'de' ? "text-cmr-red-500" : "text-cmr-gray-700")}>DE</Button>
-          <Divider orientation="vertical" className="bg-cmr-gray-700 w-[2px] h-[27px] "/>
-          <Button isIconOnly radius="none" onPress={() => handleChange('en')} disableAnimation className={cn("lg:text-xs xl:text-sm bg-transparent h-fit py-1  hover:text-cmr-red-500 transition-all ease-out duration-200 ", currentLocale === 'en' ? "text-cmr-red-500" : "text-cmr-gray-700")}>EN</Button>
+    <div className="flex items-center gap-1">
+          <button onClick={() => handleChange('de')} className={cn("size-[28px] bg-transparent rounded-[10px] hover:text-white hover:bg-cmr-red-400 transition-all ease-out duration-200 border-cmr-red-400 border-2 text-sm", currentLocale === 'de' ? "text-white bg-cmr-red-400" : "text-cmr-red-400")}>DE</button>
+          <Divider orientation="vertical" className="bg-cmr-red-400 w-[2px] h-[22px] "/>
+          <button onClick={() => handleChange('en')} className={cn("size-[28px] bg-transparent rounded-[10px] hover:text-white hover:bg-cmr-red-400 transition-all ease-out duration-200 border-cmr-red-400 border-2 text-sm", currentLocale === 'en' ? "text-white bg-cmr-red-400" : "text-cmr-red-400")}>EN</button>
     </div>
 
   );
