@@ -28,11 +28,11 @@ export default async function Home({ params: { locale } }: { params: { locale: s
         <div className="container mx-auto p-4 space-y-8">
           <h1 className="text-5xl">
             <span className="text-4xl font-extrabold bg-gradient-to-r from-[#1075BF] to-[#01F16C] bg-clip-text text-transparent">
-              {t("Für die richtige Entscheidung")}
+              {t("heroHeading")}
             </span>
           </h1>
           <Button>
-            Weitere Ansehen
+            {t("heroButton")}
           </Button>
 
           <div className="w-full">
@@ -41,11 +41,11 @@ export default async function Home({ params: { locale } }: { params: { locale: s
               <div className="flex items-center gap-6 text-black">
                 <div className="flex items-center gap-2">
                   <FaPhone className="text-black rotate-90" size={15} aria-hidden="true" />
-                  <span>06 21-18 16 0</span>
+                  <span>{t("phone")}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <FaEnvelope className="text-black" size={15} aria-hidden="true" />
-                  <a href="mailto:info@cmr.de" className="hover:underline">info@cmr.de</a>
+                  <a href="mailto:info@cmr.de" className="hover:underline">{t("email")}</a>
                 </div>
               </div>
 
@@ -70,21 +70,21 @@ export default async function Home({ params: { locale } }: { params: { locale: s
         <div className="flex flex-col gap-y-6 items-center justify-center shadow-md px-4 py-6 w-full rounded-[10px] lg:max-w-[400px]">
           <Image src={word} alt="statsIcon" width={48} height={48}/>
           <p className="text-md text-[#6D747E] text-center">
-        {t("Globalisierung und der Übergang zur Informationsgesellschaft gehen mit einem tiefgreifenden Wandel an gesellschaftlichen und ökonomischen Prozessen einher.")}
+        {t("card1Text")}
           </p>
         </div>
         
         <div className="flex flex-col gap-y-6 items-center justify-center shadow-md px-4 py-6 w-full rounded-[10px] lg:max-w-[400px]">
           <Image src={statsIcon} alt="statsIcon" width={48} height={48}/>
           <p className="text-md text-[#6D747E] text-center">
-        {t("Fundierte Informationen und deren Ableitungen gewinnen für den Erfolg von Unternehmen umso mehr an Bedeutung, je spezifischer eine Zielgruppe oder je gesättigter Märkte sind.")}
+        {t("card2Text")}
           </p>
         </div>
 
         <div className="flex flex-col gap-y-6 items-center justify-center shadow-md px-4 py-6 w-full rounded-[10px] lg:max-w-[400px]">
           <Image src={puzel} alt="statsIcon" width={48} height={48}/>
           <p className="text-md text-[#6D747E] text-center">
-        {t("Marktforschung kann die \"richtigen\" Fragen stellen und Informationen liefern, die die Grundlage für Ihre Entscheidungen sind.")}
+        {t("card3Text")}
           </p>
         </div>
       </section>
@@ -95,7 +95,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
             <Image src={medal} alt="medal" width={48} height={48} />
             <div className="mt-6 flex items-center gap-3">
               <Image src={adm} alt="logo" height={46} />
-              <p className="text-[#6D747E]">ADM-Mitglied</p>
+              <p className="text-[#6D747E]">{t("admMember")}</p>
             </div>
           </div>
 
@@ -103,39 +103,39 @@ export default async function Home({ params: { locale } }: { params: { locale: s
             <Image src={check} alt="iso" width={47} height={47} />
             <div className="mt-6 flex items-center gap-3">
               <Image src={certifiedIso} alt="logo" height={36} />
-              <p className="text-[#6D747E]">ISO-zertifiziert</p>
+              <p className="text-[#6D747E]">{t("isoCertified")}</p>
             </div>
           </div>
 
           <div className="flex-1 bg-white rounded-[10px] flex flex-col items-center justify-center min-w-[250px] py-6 px-4 relative shadow-sm">
             <Image src={plant} alt="check" width={45} height={45} />
             <div className="mt-6 flex items-center gap-3">
-              <p className="text-[#6D747E]">Klimaneutral</p>
+              <p className="text-[#6D747E]">{t("climateNeutral")}</p>
             </div>
           </div>
         </div>
       </section>
 
       <section className="container mx-auto px-4 my-[120px] relative space-y-[72px]">
-        <h1 className="text-5xl font-bold text-center">Aktuelle Einblicke</h1>
+        <h1 className="text-5xl font-bold text-center">{t("currentInsights")}</h1>
 
         <div className="p-[35px] shadow-md rounded-[10px] w-full max-w-[545px]">
-          <h2 className="text-cmr-red-400 font-bold text-2xl">Summary and Interpretation of the Survey Results for the 2025 Federal Election:</h2>
-          <p className="text-md text-[#262626]/50 ">Entdecken Sie die neuesten Erkenntnisse zur Bundestagswahl 2025, einschließlich der Wahlabsichten, Parteivergleiche und der wichtigsten Faktoren, die die Entscheidungen der Wähler beeinflussen. Klicken Sie hier, um die vollständige Analyse zu lesen.</p>
+          <h2 className="text-cmr-red-400 font-bold text-2xl">{t("studyTitle")}</h2>
+          <p className="text-md text-[#262626]/50 ">{t("studyDescription")}</p>
           <div className="w-full flex justify-end">
-            <Button>Studie ansehen</Button>
+            <Button>{t("studyButton")}</Button>
           </div>
         </div>
       </section>
 
       <section className="bg-[#EBEBEB] w-full py-[90px]">
         <div className="container mx-auto flex flex-col items-center px-4">
-          <h1 className="font-bold text-black text-5xl text-center mb-[72px]">Sind Sie ein Käseliebhaber?</h1>
+          <h1 className="font-bold text-black text-5xl text-center mb-[72px]">{t("cheeseTitle")}</h1>
           <div className="relative w-full aspect-[1113/407] mb-[55px]">
             <Image src="/images/homeimagefelwest.png" alt="image" fill/>
           </div>
-          <p className="text-center text-cmr-red-400 text-2xl font-bold max-w-[680px] mb-[24px]">Treten Sie unserem Käse-Qualitätspanel bei und werden Sie bezahlt, um neue Produkte zu probieren!</p>
-          <Button>Jetzt bewerben</Button>
+          <p className="text-center text-cmr-red-400 text-2xl font-bold max-w-[680px] mb-[24px]">{t("cheeseDescription")}</p>
+          <Button>{t("cheeseButton")}</Button>
         </div>
       </section>
     </>

@@ -1,10 +1,19 @@
 {
-    "Für die richtige Entscheidung": "For the right decision",
-    "Globalisierung und der Übergang zur Informationsgesellschaft gehen mit einem tiefgreifenden Wandel an gesellschaftlichen und ökonomischen Prozessen einher.": "Globalization and the transition to the information society are accompanied by a profound change in social and economic processes.",
-    "Fundierte Informationen und deren Ableitungen gewinnen für den Erfolg von Unternehmen umso mehr an Bedeutung, je spezifischer eine Zielgruppe oder je gesättigter Märkte sind.": "Sound information and its derivations become increasingly important for the success of companies, the more specific a target group or the more saturated markets are.",
-    "Marktforschung kann die \"richtigen\" Fragen stellen und Informationen liefern, die die Grundlage für Ihre Entscheidungen sind.": "Market research can ask the \"right\" questions and provide information that forms the basis for your decisions.",
-    "Sind Sie ein Käseliebhaber?": "Are you a cheese lover?",
-    "Wir suchen Sie! Weitere Informationen sowie den Link zum Vorabinterview finden Sie hier.": "We are looking for you! Further information and the link to the preliminary interview can be found here.",
-    "Sie wurden von uns angerufen? / Informationen für Probanden": "You were called by us? / Information for test subjects",
-    "Mehr Informationen finden Sie hier. ": "More informations can be found here."
+  "heroHeading": "For the right decision",
+  "heroButton": "View More",
+  "phone": "06 21-18 16 0",
+  "email": "info@cmr.de",
+  "card1Text": "Globalization and the transition to the information society are accompanied by profound changes in social and economic processes.",
+  "card2Text": "Well-founded information and its derivatives are becoming increasingly important for the success of companies, the more specific a target group or the more saturated markets are.",
+  "card3Text": "Market research can ask the \"right\" questions and provide information that forms the basis for your decisions.",
+  "admMember": "ADM Member",
+  "isoCertified": "ISO Certified",
+  "climateNeutral": "Climate Neutral",
+  "currentInsights": "Current Insights",
+  "studyTitle": "Summary and Interpretation of the Survey Results for the 2025 Federal Election:",
+  "studyDescription": "Discover the latest insights on the 2025 federal election, including voting intentions, party comparisons, and the key factors influencing voter decisions. Click here to read the full analysis.",
+  "studyButton": "View Study",
+  "cheeseTitle": "Are you a cheese lover?",
+  "cheeseDescription": "Join our cheese quality panel and get paid to try new products!",
+  "cheeseButton": "Apply Now"
 }

@@ -41,7 +41,24 @@ const config: Config = {
           500 : "#808080",
           700: "#bfbfbf",
           900: "#ebebeb"
+        },
+        "cmr-blue": {
+          400: '#1075BF',
+          500: '#0066CC'
+        },
+        "cmr-green": {
+          400: '#01F16C',
+          500: '#00CC5A'
+        },
+        "cmr-background": {
+          light: '#F6F6F6',
+          section: '#EDEDF9'
         }
+      },
+      boxShadow: {
+        'cmr': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+        'cmr-lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        'cmr-xl': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
       },
         screens:{
           sm: '576px',

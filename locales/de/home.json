@@ -1,10 +1,19 @@
 {
-    "Für die richtige Entscheidung": "Für die richtige Entscheidung",
-    "Globalisierung und der Übergang zur Informationsgesellschaft gehen mit einem tiefgreifenden Wandel an gesellschaftlichen und ökonomischen Prozessen einher.": "Globalisierung und der Übergang zur Informationsgesellschaft gehen mit einem tiefgreifenden Wandel an gesellschaftlichen und ökonomischen Prozessen einher.",
-    "Fundierte Informationen und deren Ableitungen gewinnen für den Erfolg von Unternehmen umso mehr an Bedeutung, je spezifischer eine Zielgruppe oder je gesättigter Märkte sind.": "Fundierte Informationen und deren Ableitungen gewinnen für den Erfolg von Unternehmen umso mehr an Bedeutung, je spezifischer eine Zielgruppe oder je gesättigter Märkte sind.",
-    "Marktforschung kann die \"richtigen\" Fragen stellen und Informationen liefern, die die Grundlage für Ihre Entscheidungen sind.": "Marktforschung kann die \"richtigen\" Fragen stellen und Informationen liefern, die die Grundlage für Ihre Entscheidungen sind.",
-    "Sind Sie ein Käseliebhaber?": "Sind Sie ein Käseliebhaber?",
-    "Wir suchen Sie! Weitere Informationen sowie den Link zum Vorabinterview finden Sie hier.": "Wir suchen Sie! Weitere Informationen sowie den Link zum Vorabinterview finden Sie hier.",
-    "Sie wurden von uns angerufen? / Informationen für Probanden": "Sie wurden von uns angerufen? / Informationen für Probanden",
-    "Mehr Informationen finden Sie hier. ": "Mehr Informationen finden Sie hier. "
+  "heroHeading": "Für die richtige Entscheidung",
+  "heroButton": "Weitere Ansehen",
+  "phone": "06 21-18 16 0",
+  "email": "info@cmr.de",
+  "card1Text": "Globalisierung und der Übergang zur Informationsgesellschaft gehen mit einem tiefgreifenden Wandel an gesellschaftlichen und ökonomischen Prozessen einher.",
+  "card2Text": "Fundierte Informationen und deren Ableitungen gewinnen für den Erfolg von Unternehmen umso mehr an Bedeutung, je spezifischer eine Zielgruppe oder je gesättigter Märkte sind.",
+  "card3Text": "Marktforschung kann die \"richtigen\" Fragen stellen und Informationen liefern, die die Grundlage für Ihre Entscheidungen sind.",
+  "admMember": "ADM-Mitglied",
+  "isoCertified": "ISO-zertifiziert",
+  "climateNeutral": "Klimaneutral",
+  "currentInsights": "Aktuelle Einblicke",
+  "studyTitle": "Summary and Interpretation of the Survey Results for the 2025 Federal Election:",
+  "studyDescription": "Entdecken Sie die neuesten Erkenntnisse zur Bundestagswahl 2025, einschließlich der Wahlabsichten, Parteivergleiche und der wichtigsten Faktoren, die die Entscheidungen der Wähler beeinflussen. Klicken Sie hier, um die vollständige Analyse zu lesen.",
+  "studyButton": "Studie ansehen",
+  "cheeseTitle": "Sind Sie ein Käseliebhaber?",
+  "cheeseDescription": "Treten Sie unserem Käse-Qualitätspanel bei und werden Sie bezahlt, um neue Produkte zu probieren!",
+  "cheeseButton": "Jetzt bewerben"
 }

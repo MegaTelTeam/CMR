@@ -20,7 +20,7 @@ export default async function RootLayout({
               <NavBar/>
             </I18nextProvider>
               <div className="min-h-[calc(100dvh-124px)] ">{children}</div>
-            <Footer/>
+            <Footer locale={locale} />
 
         </main>
     );
