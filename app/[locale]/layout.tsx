@@ -14,21 +14,11 @@ export default async function RootLayout({
     const { resources } = await initTranslations(locale, ["navbar"]);
 
     return (
-        <main className="w-full">
+        <main className="w-full bg-[#F6F6F6]">
 
             <I18nextProvider namespaces={["navbar"]} locale={locale} resources={resources} >
               <NavBar/>
             </I18nextProvider>
-            <div className="w-full relative container mx-auto">
-              <Image
-                src="/heroImage.png"
-                alt="logo"
-                width={1120}
-                height={289}
-                style={{ width: "100%", height: "auto" }}
-                className="w-full h-auto"
-              />
-            </div>
               <div className="min-h-[calc(100dvh-124px)] ">{children}</div>
             <Footer/>
 

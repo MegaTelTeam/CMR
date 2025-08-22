@@ -30,6 +30,7 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "cmr-gradient": "linear-gradient(90deg, #000000 0%, #575757 43%, #808080 48.62%, #941530 63.68%)",
+        "cmr-bluegreen": "linear-gradient(90deg, #1075BF 0%, #01F16C 100%)",
       },
       colors: {
         "cmr-red" : {

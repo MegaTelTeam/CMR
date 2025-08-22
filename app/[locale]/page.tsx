@@ -1,75 +1,143 @@
-import statsIcon from "../../public/images/home/statsLogo.png"
-import word from "../../public/images/home/word.png"
-import puzel from "../../public/images/home/puzel.png"
 import Image from "next/image"
-import { FaArrowDownLong } from "react-icons/fa6";
-
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone, FaEnvelope } from "react-icons/fa";
 import initTranslations  from "../i18n";
+import { Button } from "@/components/ui/buttons";
 
-import Link from "next/link";
+import statsIcon from "../../public/icons/pie.png"
+import word from "../../public/icons/world-shape-public-symbol.png"
+import puzel from "../../public/icons/puzzle.png"
+import check from "../../public/icons/check.png"
+import certifiedIso from "../../public/icons/certified-company-certificate-iso-90012015-260nw-2461204389.png"
+import medal from "../../public/icons/medal.png"
+import adm from "../../public/icons/adm logo.png"
+import plant from "../../public/icons/Plant-2.png"
 
 export default async function Home({ params: { locale } }: { params: { locale: string } }) {
   const { t } = await initTranslations(locale, ['home']);
 
   return (
     <>
-      <div className="container mx-auto grid grid-cols-3 lg:grid-cols-12 gap-16 px-8 md:px:4 lg:px:2 mb-32">
-        <h1 className="text-center col-span-3 lg:col-span-12 mt-5 mb-14">
-            <span className="text-4xl font-extrabold bg-gradient-to-r from-cmr-gray-500 to-cmr-red-500 bg-clip-text text-transparent">
+      <section className="bg-[#EBEBEB] space-y-16 px-4">
+        <div className="w-full relative container mx-auto aspect-[1120/289]">
+          <Image
+            src="/heroImages/home.png"
+            alt="logo"
+            fill
+          />
+        </div>
+        <div className="container mx-auto p-4 space-y-8">
+          <h1 className="text-5xl">
+            <span className="text-4xl font-extrabold bg-gradient-to-r from-[#1075BF] to-[#01F16C] bg-clip-text text-transparent">
               {t("Für die richtige Entscheidung")}
             </span>
-        </h1>
+          </h1>
+          <Button>
+            Weitere Ansehen
+          </Button>
 
-        <section className="flex flex-col gap-y-8 col-span-3 items-center lg:items-start lg:col-span-4 ">
-          <Image src={word} alt="statsIcon" height={34}/>
-          <p>
-            {t("Globalisierung und der Übergang zur Informationsgesellschaft gehen mit einem tiefgreifenden Wandel an gesellschaftlichen und ökonomischen Prozessen einher.")}
-          </p>
-        </section>
-        
-        <section className="flex flex-col gap-y-8 items-center lg:items-start col-span-3 lg:col-span-4">
-          <Image src={statsIcon} alt="statsIcon" height={34}/>
-          <p>
-            {t("Fundierte Informationen und deren Ableitungen gewinnen für den Erfolg von Unternehmen umso mehr an Bedeutung, je spezifischer eine Zielgruppe oder je gesättigter Märkte sind.")}
-          </p>
-        </section>
-
-        <section className="flex flex-col gap-y-8 items-center lg:items-start col-span-3 lg:col-span-4">
-          <Image src={puzel} alt="statsIcon" height={34}/>
-          <p>
-            {t("Marktforschung kann die \"richtigen\" Fragen stellen und Informationen liefern, die die Grundlage für Ihre Entscheidungen sind.")}
-          </p>
-        </section>
-      </div>
-      <div className="w-full bg-[#EDEDF9] px-8 md:px:4 lg:px:2 mb-16">
-        <div className="container mx-auto py-8 space-y-8">
-          <section className="relative rounded-lg shadow-md overflow-hidden text-md hover:shadow-lg transition-all ease-in-out duration-200 lg:w-[70%] w-full">
-            <div className="absolute bg-cmr-red-500 opacity-10 size-full"/>
-            <div className="p-6 flex flex-col lg:flex-row gap-y-2 lg:gap-y-0 items-end lg:items-center lg:justify-between">
-              <div className="z-10">
-                <h2 className="text-2xl font-semibold">{t("Sind Sie ein Käseliebhaber?")}</h2>
-                <p>{t("Wir suchen Sie! Weitere Informationen sowie den Link zum Vorabinterview finden Sie hier.")}</p>
+          <div className="w-full">
+            <div className="container mx-auto flex items-center justify-between py-2 text-sm">
+              {/* left: phone + email */}
+              <div className="flex items-center gap-6 text-black">
+                <div className="flex items-center gap-2">
+                  <FaPhone className="text-black rotate-90" size={15} aria-hidden="true" />
+                  <span>06 21-18 16 0</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FaEnvelope className="text-black" size={15} aria-hidden="true" />
+                  <a href="mailto:info@cmr.de" className="hover:underline">info@cmr.de</a>
+                </div>
               </div>
-              <Link href="#" className="z-10">
-                <FaArrowDownLong size={22}/>
-              </Link>
-            </div>
-          </section>
 
-          <section className="relative rounded-lg shadow-md overflow-hidden text-md hover:shadow-lg transition-all ease-in-out duration-200 lg:w-[70%] w-full">
-            <div className="absolute bg-cmr-gray-500 opacity-10 size-full"/>
-            <div className="p-6 flex flex-col lg:flex-row gap-y-2 lg:gap-y-0 items-end lg:items-center lg:justify-between">
-              <div className="z-10">
-                <h2 className="text-2xl font-semibold">{t("Sie wurden von uns angerufen? / Informationen für Probanden")}</h2>
-                <p>{t("Mehr Informationen finden Sie hier. ")}</p>
+              {/* right: social icons */}
+              <div className="flex items-center gap-4">
+                <a href="#" aria-label="Facebook" className="bg-black text-white rounded-sm p-[3px]" title="Facebook">
+                  <FaFacebookF size={18} aria-hidden="true" />
+                </a>
+                <a href="#" aria-label="Instagram" className="" title="Instagram">
+                  <FaInstagram size={24} aria-hidden="true" />
+                </a>
+                <a href="#" aria-label="LinkedIn" className="bg-black text-white rounded-sm p-[3px]" title="LinkedIn">
+                  <FaLinkedinIn size={18} aria-hidden="true" />
+                </a>
               </div>
-              <Link href="#" className="z-10 w-fit ">
-                <FaArrowDownLong size={22}/>
-              </Link>
             </div>
-          </section>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section className="container mx-auto flex flex-wrap lg:flex-nowrap justify-center lg:justify-between gap-8 my-[98px] px-4">
+        <div className="flex flex-col gap-y-6 items-center justify-center shadow-md px-4 py-6 w-full rounded-[10px] lg:max-w-[400px]">
+          <Image src={word} alt="statsIcon" width={48} height={48}/>
+          <p className="text-md text-[#6D747E] text-center">
+        {t("Globalisierung und der Übergang zur Informationsgesellschaft gehen mit einem tiefgreifenden Wandel an gesellschaftlichen und ökonomischen Prozessen einher.")}
+          </p>
+        </div>
+        
+        <div className="flex flex-col gap-y-6 items-center justify-center shadow-md px-4 py-6 w-full rounded-[10px] lg:max-w-[400px]">
+          <Image src={statsIcon} alt="statsIcon" width={48} height={48}/>
+          <p className="text-md text-[#6D747E] text-center">
+        {t("Fundierte Informationen und deren Ableitungen gewinnen für den Erfolg von Unternehmen umso mehr an Bedeutung, je spezifischer eine Zielgruppe oder je gesättigter Märkte sind.")}
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-y-6 items-center justify-center shadow-md px-4 py-6 w-full rounded-[10px] lg:max-w-[400px]">
+          <Image src={puzel} alt="statsIcon" width={48} height={48}/>
+          <p className="text-md text-[#6D747E] text-center">
+        {t("Marktforschung kann die \"richtigen\" Fragen stellen und Informationen liefern, die die Grundlage für Ihre Entscheidungen sind.")}
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-[#EBEBEB] w-full px-4">
+        <div className="container mx-auto flex items-stretch justify-between gap-6 py-8 lg:px-[200px] flex-wrap">
+          <div className="flex-1 bg-white rounded-[10px] flex flex-col items-center justify-center min-w-[250px] py-6 px-4 relative shadow-sm">
+            <Image src={medal} alt="medal" width={48} height={48} />
+            <div className="mt-6 flex items-center gap-3">
+              <Image src={adm} alt="logo" height={46} />
+              <p className="text-[#6D747E]">ADM-Mitglied</p>
+            </div>
+          </div>
+
+          <div className="flex-1 bg-white rounded-[10px] flex flex-col items-center justify-center min-w-[250px] py-6 px-4 relative shadow-sm border-x border-[#D1D5DB] border-dashed">
+            <Image src={check} alt="iso" width={47} height={47} />
+            <div className="mt-6 flex items-center gap-3">
+              <Image src={certifiedIso} alt="logo" height={36} />
+              <p className="text-[#6D747E]">ISO-zertifiziert</p>
+            </div>
+          </div>
+
+          <div className="flex-1 bg-white rounded-[10px] flex flex-col items-center justify-center min-w-[250px] py-6 px-4 relative shadow-sm">
+            <Image src={plant} alt="check" width={45} height={45} />
+            <div className="mt-6 flex items-center gap-3">
+              <p className="text-[#6D747E]">Klimaneutral</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4 my-[120px] relative space-y-[72px]">
+        <h1 className="text-5xl font-bold text-center">Aktuelle Einblicke</h1>
+
+        <div className="p-[35px] shadow-md rounded-[10px] w-full max-w-[545px]">
+          <h2 className="text-cmr-red-400 font-bold text-2xl">Summary and Interpretation of the Survey Results for the 2025 Federal Election:</h2>
+          <p className="text-md text-[#262626]/50 ">Entdecken Sie die neuesten Erkenntnisse zur Bundestagswahl 2025, einschließlich der Wahlabsichten, Parteivergleiche und der wichtigsten Faktoren, die die Entscheidungen der Wähler beeinflussen. Klicken Sie hier, um die vollständige Analyse zu lesen.</p>
+          <div className="w-full flex justify-end">
+            <Button>Studie ansehen</Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#EBEBEB] w-full py-[90px]">
+        <div className="container mx-auto flex flex-col items-center px-4">
+          <h1 className="font-bold text-black text-5xl text-center mb-[72px]">Sind Sie ein Käseliebhaber?</h1>
+          <div className="relative w-full aspect-[1113/407] mb-[55px]">
+            <Image src="/images/homeimagefelwest.png" alt="image" fill/>
+          </div>
+          <p className="text-center text-cmr-red-400 text-2xl font-bold max-w-[680px] mb-[24px]">Treten Sie unserem Käse-Qualitätspanel bei und werden Sie bezahlt, um neue Produkte zu probieren!</p>
+          <Button>Jetzt bewerben</Button>
+        </div>
+      </section>
     </>
   );
 }
