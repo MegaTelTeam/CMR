@@ -20,10 +20,10 @@ export default function NavToolTip({list,text,link}:{list:{text:string,link:stri
             className="relative group hover:h-full h-fit flex items-center  flex-shrink-0"
         >
 
-            <Link href={link} className={cn("cursor-pointer text-xs 2xl:text-sm text-forground group-hover:text-white group-hover:bg-cmr-red-400 rounded-[10px] transition-all ease-out duration-200 px-3 py-2 ", pathName.includes(link) ? "text-white bg-cmr-red-400" : "")}>
+            <button className={cn("cursor-pointer text-xs 2xl:text-sm text-forground group-hover:text-white group-hover:bg-cmr-red-400 rounded-[10px] transition-all ease-out duration-200 px-3 py-2 ", pathName.includes(link) ? "text-white bg-cmr-red-400" : "")}>
                 {text}
                 <FaAngleDown className="inline-block ml-1 group-hover:rotate-180 transition-all ease-out duration-200"/>
-            </Link>
+            </button>
             { currentHover && (
             <div 
                 className="absolute top-full border-transparent border-t-4 z-10 max-w-[377px] min-w-[200px]">

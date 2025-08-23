@@ -44,18 +44,18 @@ export function getMenuItems({t}: {t: any}) : MenuItem {
     },
     {
       text: t("REFERENZPROJEKTE"),
-      link: "/Kompetenz/referenzprojekte",
+      link: "/referenzprojekte",
       list: [
-        { text: t("PRINTMEDIEN"), link: "/Kompetenz/referenzprojekte/printmedien" },
-        { text: t("HÖRFUNK"), link: "/Kompetenz/referenzprojekte/horfunk" },
+        { text: t("PRINTMEDIEN"), link: "/referenzprojekte/printmedien" },
+        { text: t("HÖRFUNK"), link: "/referenzprojekte/horfunk" },
         {
           text: t("INVESTITIONSGÜTER | INFORMATIONSTECHNOLOGIE | TELEKOMMUNIKATION"),
-          link: "/Kompetenz/referenzprojekte/investitionsguter",
+          link: "/referenzprojekte/investitionsguter",
         },
-        { text: t("HANDEL | GASTRONOMIE"), link: "/Kompetenz/referenzprojekte/handel-gastronomie" },
+        { text: t("HANDEL | GASTRONOMIE"), link: "/referenzprojekte/handel-gastronomie" },
         {
           text: t("MEINUNGSFORSCHUNG | POLITIK-UMFRAGEN"),
-          link: "/Kompetenz/referenzprojekte/meinungsforschung-politik-umfragen",
+          link: "/referenzprojekte/meinungsforschung-politik-umfragen",
         },
       ],
     },
